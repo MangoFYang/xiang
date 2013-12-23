@@ -11,7 +11,7 @@ public class IndexController {
 		return "/index";
 	}
 	
-	public String aaa() {
+	public String bbb() {
 		return null;
 	}
 	
