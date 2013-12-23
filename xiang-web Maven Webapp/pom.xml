@@ -5,6 +5,8 @@
 	<packaging>war</packaging>
 	<name>xiang-web Maven Webapp</name>
 
+
+
 	<build>
 		<finalName>xiang-web</finalName>
 		<plugins>
