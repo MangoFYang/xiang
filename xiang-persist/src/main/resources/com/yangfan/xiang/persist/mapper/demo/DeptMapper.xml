@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangfan.xiang.persist.mapper.demo.DeptMapper">
+
+	<resultMap id="DeptResultMap" type="com.yangfan.xiang.domain.demo.emp.Dept">
+		<id property="deptNo" column="deptNo" jdbcType="INTEGER"/>
+		<result property="dName" column="dName" jdbcType="VARCHAR"/>
+		<result property="loc" column="loc" jdbcType="VARCHAR"/>
+	</resultMap>
+
+	<insert id="savePojo" parameterType="com.yangfan.xiang.domain.demo.emp.Dept">
+		INSERT INTO DEMO_DEPT (DEPTNO, DNAME, LOC) 
+		VALUES ( #{deptNo}, #{dName}, #{loc} )
+	</insert>
+
+</mapper>

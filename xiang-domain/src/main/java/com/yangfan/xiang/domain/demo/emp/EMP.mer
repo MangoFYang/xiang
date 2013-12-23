@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ERDiagram version="1.1">
+  <Connection session="oracle.jdbc.OracleDriver" database="XIANG" />
+  <Drawing gridVisible="false" snapOn="false" fastRouting="false" labelsVisible="true" />
+  <Tables>
+    <Table name="DEMO_EMP">
+      <Drawing expanded="true" location="103,122" dimensions="205,191" />
+      <Columns>
+        <Column name="EMPNO" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="COMM" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="FLOAT" size="126" />
+        </Column>
+        <Column name="ENAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="255" />
+        </Column>
+        <Column name="HIREDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="DATE" size="7" />
+        </Column>
+        <Column name="JOB" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="255" />
+        </Column>
+        <Column name="SAL" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="FLOAT" size="126" />
+        </Column>
+        <Column name="DEPTNO" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="MGR" primary_key="false" foreign_key="true" required="false" unique="false">
+          <Data type="NUMBER" size="10" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="DEMO_DEPT">
+      <Drawing expanded="true" location="108,465" dimensions="199,91" />
+      <Columns>
+        <Column name="DEPTNO" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="DNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="255" />
+        </Column>
+        <Column name="LOC" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="DEMO_SALGRADE">
+      <Drawing expanded="true" location="397,324" dimensions="172,91" />
+      <Columns>
+        <Column name="GRADE" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="HISAL" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="FLOAT" size="126" />
+        </Column>
+        <Column name="LOSAL" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="FLOAT" size="126" />
+        </Column>
+      </Columns>
+    </Table>
+  </Tables>
+  <Relationships>
+    <Relationship name="FK61C8884C337DB4EB">
+      <Details primary_table="DEMO_EMP" foreign_table="DEMO_EMP">
+        <PrimaryKeys>
+          <ColumnName name="EMPNO" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="MGR" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK61C8884CEC6DC860">
+      <Details primary_table="DEMO_DEPT" foreign_table="DEMO_EMP">
+        <PrimaryKeys>
+          <ColumnName name="DEPTNO" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="DEPTNO" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+  </Relationships>
+</ERDiagram>
+

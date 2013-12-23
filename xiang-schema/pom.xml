@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>xiang-schema</artifactId>
+	<packaging>jar</packaging>
+	<name>xiang-schema</name>
+
+	<parent>
+		<groupId>com.yangfan.xiang</groupId>
+		<artifactId>xiang-aggregator</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../xiang-aggregator</relativePath>
+	</parent>
+
+	<dependencies>
+		<!-- 测试 -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.yangfan.xiang</groupId>
+			<artifactId>xiang-domain</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.yangfan.xiang</groupId>
+			<artifactId>xiang-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.yangfan.xiang</groupId>
+			<artifactId>xiang-persist</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.yangfan.xiang</groupId>
+			<artifactId>xiang-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+</project>

@@ -1,0 +1,24 @@
+h2 {
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 1em 0;
+    text-indent: 1em;
+}
+
+p {
+    margin: 1em;
+}
+
+div.fixed {
+	position: fixed;
+    right: 50px;
+}
+
+.demo-tabs {
+	position: absolute; 
+	left: 0; 
+	right: 0; 
+	top: 0; 
+	bottom: 0;
+}

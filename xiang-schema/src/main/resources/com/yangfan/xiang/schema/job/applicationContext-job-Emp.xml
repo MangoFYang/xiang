@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.1.xsd
+        http://www.springframework.org/schema/jee 
+		http://www.springframework.org/schema/jee/spring-jee-3.1.xsd
+		http://www.springframework.org/schema/task
+		http://www.springframework.org/schema/task/spring-task-3.1.xsd
+		http://www.springframework.org/schema/batch
+		http://www.springframework.org/schema/batch/spring-batch-2.1.xsd">
+
+	<batch:job id="EmpJob" parent="coreJob">
+		<batch:step id="EmpStep" parent="coreStep">
+			<batch:tasklet transaction-manager="transactionManager">
+				<batch:chunk reader="EmpItemReader" writer="EmpItemWriter" commit-interval="10">
+				</batch:chunk>
+			</batch:tasklet>
+		</batch:step>
+	</batch:job>
+
+	<!-- 读取Emp文件 -->
+	<bean id="EmpItemReader" class="org.springframework.batch.item.file.FlatFileItemReader" scope="step">
+		<property name="resource"
+			value="classpath:com/yangfan/xiang/schema/demo/emp/EMP.data"></property>
+		<property name="lineMapper">
+			<bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
+				<property name="lineTokenizer" ref="lineTokenizer"></property>
+				<property name="fieldSetMapper">
+					<bean class="com.yangfan.xiang.schema.demo.emp.EmpMapper"></bean>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<!-- 写入数据库 -->
+	<bean id="EmpItemWriter" class="org.springframework.batch.item.adapter.ItemWriterAdapter">
+	    <property name="targetObject" ref="com.yangfan.xiang.service.impl.demo.emp.EmpServiceImpl" />
+	    <property name="targetMethod" value="save" />
+	</bean>
+
+</beans>

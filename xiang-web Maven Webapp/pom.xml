@@ -1,0 +1,149 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>xiang-web</artifactId>
+	<packaging>war</packaging>
+	<name>xiang-web Maven Webapp</name>
+
+	<build>
+		<finalName>xiang-web</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.cargo</groupId>
+				<artifactId>cargo-maven2-plugin</artifactId>
+				<version>1.3.2</version>
+				<!-- tomcat6x -->
+				<configuration>
+					<container>
+						<containerId>tomcat6x</containerId>
+						<home>D:\soft\package\asf\tomcat\apache-tomcat-6.0.33</home>
+					</container>
+					<configuration>
+						<type>existing</type>
+						<home>D:\soft\package\asf\tomcat\apache-tomcat-6.0.33</home>
+					</configuration>
+				</configuration>
+				
+				<!-- weblogic12x
+				<configuration>
+					<container>
+						<containerId>weblogic12x</containerId>
+					</container>
+					<configuration>
+						<type>existing</type>
+						<home>D:\Oracle\Middleware\user_projects\domains\xiang</home>
+					</configuration>
+				</configuration>
+				 -->
+				<executions>
+					<!-- 	
+					<execution>
+						<id>container-stop</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>stop</goal>
+						</goals>
+					</execution> 
+					 -->
+					<!-- 
+					<execution>
+						<id>container-undeploy</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>undeploy</goal>
+						</goals>
+					</execution>
+					 -->
+					<execution>
+						<id>container-redeploy</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>redeploy</goal>
+						</goals>
+					</execution>
+					<!-- 
+					<execution>
+						<id>container-run</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+					 -->
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<!-- 测试 -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
+		<!-- servlet jsp -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+        </dependency>
+		<!-- jstl -->
+		<dependency>
+			<groupId>javax.servlet.jsp.jstl</groupId>
+			<artifactId>jstl-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>jstl-impl</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.yangfan.xiang</groupId>
+			<artifactId>xiang-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.yangfan.xiang</groupId>
+			<artifactId>xiang-domain</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.yangfan.xiang</groupId>
+			<artifactId>xiang-persist</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.yangfan.xiang</groupId>
+			<artifactId>xiang-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.yangfan.xiang</groupId>
+			<artifactId>xiang-schema</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+	<parent>
+		<groupId>com.yangfan.xiang</groupId>
+		<artifactId>xiang-aggregator</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../xiang-aggregator</relativePath>
+	</parent>
+
+</project>

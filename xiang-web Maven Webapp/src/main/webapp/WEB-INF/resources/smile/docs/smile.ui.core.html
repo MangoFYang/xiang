@@ -1,0 +1,810 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:黑体;
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@黑体";
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";}
+h1
+	{mso-style-link:"标题 1 Char";
+	margin-top:17.0pt;
+	margin-right:0cm;
+	margin-bottom:16.5pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:240%;
+	page-break-after:avoid;
+	font-size:22.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"页眉 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	layout-grid-mode:char;
+	border:none;
+	padding:0cm;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"页脚 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	layout-grid-mode:char;
+	font-size:9.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"标题 Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	text-align:center;
+	font-size:16.0pt;
+	font-family:"Cambria","serif";
+	font-weight:bold;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-link:"文档结构图 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:9.0pt;
+	font-family:宋体;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:21.0pt;
+	font-size:10.5pt;
+	font-family:"Calibri","sans-serif";}
+span.Char
+	{mso-style-name:"页眉 Char";
+	mso-style-link:页眉;}
+span.Char0
+	{mso-style-name:"页脚 Char";
+	mso-style-link:页脚;}
+span.1Char
+	{mso-style-name:"标题 1 Char";
+	mso-style-link:"标题 1";
+	font-weight:bold;}
+span.Char1
+	{mso-style-name:"标题 Char";
+	mso-style-link:标题;
+	font-family:"Cambria","serif";
+	font-weight:bold;}
+span.Char2
+	{mso-style-name:"文档结构图 Char";
+	mso-style-link:文档结构图;
+	font-family:宋体;}
+ /* Page Definitions */
+ @page Section1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN style='text-justify-trim:punctuation'>
+
+<div class=Section1 style='layout-grid:15.6pt'>
+
+<p class=MsoTitle><span lang=EN-US style='font-family:宋体;color:#244061'>smile
+core</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-size:15.0pt;font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:15.0pt;font-family:宋体'>描述及最佳实践</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt'><span lang=EN-US>Smile Core</span><span
+style='font-family:宋体'>是</span><span lang=EN-US>Smile</span><span
+style='font-family:宋体'>组件的核心类，负责创建命名空间，阻止重复装载，提供常用工具、校验类型、</span><span
+lang=EN-US>ajax</span><span style='font-family:宋体'>请求、提示框、汉字到拼音的转换等初始化工作等。其他</span><span
+lang=EN-US>Smile</span><span style='font-family:宋体'>组件必须在此之后引用。</span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>汉字到拼音的转换只处理部分多音字，使用过程中如遇到未达到要求转化时，请于香帆取得联系，此功能在搜索中经常使用。此外还提供了常用的工具方法，具体信息请继续阅读。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>命名空间：</span></p>
+
+<p class=MsoNormal><span lang=EN-US>         $.smile</span><span
+style='font-family:宋体'>，别名：</span><span lang=EN-US>Smile</span><span
+style='font-family:宋体'>。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>         </span><span style='font-family:
+宋体;color:red'>请注意大小写。</span></p>
+
+<p class=MsoNormal align=right style='text-align:right;word-break:break-all'><span
+style='font-family:宋体'>继承：</span><span lang=EN-US>$  </span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-size:15.0pt;font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US
+style='font-size:15.0pt'>AJAX</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>功能说明：</span></p>
+
+<p class=MsoNormal><span lang=EN-US>         Smile ajax</span><span
+style='font-family:宋体'>是对</span><span lang=EN-US>$.ajax</span><span
+style='font-family:宋体'>的扩展。新增功能：请求遮罩</span><span lang=EN-US>(</span><span
+lang=EN-US style='font-family:宋体'>overlay</span><span style='font-family:宋体'>设置为<span
+lang=EN-US>true</span></span><span lang=EN-US>)</span><span style='font-family:
+宋体'>、错误处理</span><span lang=EN-US>(404</span><span style='font-family:宋体'>、</span><span
+lang=EN-US>500)</span><span style='font-family:宋体'>等。</span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>使用说明：</span></p>
+
+<p class=MsoNormal><span lang=EN-US>         Smile.ajax(options);</span></p>
+
+<p class=MsoNormal><span lang=EN-US>         </span><span style='font-family:
+宋体'>使用者不用编写服务端异常、未找到资源、网络异常等相关代码，只需重写</span><span lang=EN-US style='font-family:
+宋体'>onComplete</span><span style='font-family:宋体'>选项处理后续逻辑和逻辑错误即可。</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<table class=-111 border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.46%;border:solid #4F81BD 1.0pt;
+  border-bottom:solid #4F81BD 2.25pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:宋体'>方法名</span></b></p>
+  </td>
+  <td width="89%" valign=top style='width:89.54%;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 2.25pt;border-right:solid #4F81BD 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:宋体'>描述</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.46%;border:solid #4F81BD 1.0pt;
+  border-top:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>ajax</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.54%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>    /**</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>     * </span><span
+  style='font-family:宋体'>对<span lang=EN-US>$.ajax</span>的封装，兼容原生<span
+  lang=EN-US>ajax</span>选项。</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>     * url</span><span
+  style='font-family:宋体'>选项默认添加上下文根<span lang=EN-US>, window.contextPath</span>作为全局变量可以随时在<span
+  lang=EN-US>JS</span>代码中使用。</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>     * </span><span
+  style='font-family:宋体'>若要处理发送请求之后的动作，只用传入<span lang=EN-US>onComplete</span>回调函数即可</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>     * @param
+  options ajax</span><span style='font-family:宋体'>选项，<span lang=EN-US>options</span>结构如下：</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>     *  {</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>     *      </span><span
+  style='font-family:宋体'>原生<span lang=EN-US>ajax</span>选项<span lang=EN-US>,</span></span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>     *      overlay:
+  </span><span style='font-family:宋体'>是否需要请求期间拥有遮罩<span lang=EN-US>,</span></span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>     *      onComplete:
+  function(data, textStatus) {</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>     *          //
+  </span><span style='font-family:宋体'>后续处理</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>     *      }</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>     *  }</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>     */</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-size:15.0pt;font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:15.0pt;font-family:宋体'>工具方法</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>使用说明：</span></p>
+
+<p class=MsoNormal><span lang=EN-US>         $.smile.util.methodName(parameters);</span></p>
+
+<p class=MsoNormal><span lang=EN-US>         </span><span style='font-family:
+宋体'>也可以使用</span><span lang=EN-US>Smile.util.methodName(parameters);</span></p>
+
+<p class=MsoNormal><span lang=EN-US>         </span><span style='font-family:
+宋体'>两种调用方式等价。</span></p>
+
+<p class=MsoNormal><a name="OLE_LINK2"></a><a name="OLE_LINK1"><span
+lang=EN-US>&nbsp;</span></a></p>
+
+<table class=-111 border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.46%;border:solid #4F81BD 1.0pt;
+  border-bottom:solid #4F81BD 2.25pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:宋体'>方法名</span></b></p>
+  </td>
+  <td width="89%" valign=top style='width:89.54%;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 2.25pt;border-right:solid #4F81BD 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:宋体'>描述</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.46%;border:solid #4F81BD 1.0pt;
+  border-top:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>formatDate</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.54%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>        /**</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span><span
+  style='font-family:宋体'>格式化日期，将<span lang=EN-US>Date</span>对象转换成<span
+  lang=EN-US>format</span>格式的字符串</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * @param
+  {Date} date Date</span><span style='font-family:宋体'>对象</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         *
+  @returns format</span><span style='font-family:宋体'>对应的日期字符串</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         */</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.46%;border:solid #4F81BD 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>parseDate</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.54%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>        /**</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span><span
+  style='font-family:宋体'>解析日期字符串，将<span lang=EN-US>format</span>格式的字符转解析成<span
+  lang=EN-US>Date</span>对象</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * @param
+  {String} value </span><span style='font-family:宋体'>和<span lang=EN-US>format</span>相对应的日期字符串</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         *
+  @returns Date</span><span style='font-family:宋体'>对象</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         */</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.46%;border:solid #4F81BD 1.0pt;
+  border-top:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>formatString</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.54%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>        /**</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span><span
+  style='font-family:宋体'>格式化字符串<span lang=EN-US>, p...</span>为可变参数，用于填充格式化的字符串中占位符，占位符使用<span
+  lang=EN-US>{x}</span>表示。</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * @param
+  {String} format </span><span style='font-family:宋体'>需要格式化的字符串，比如：请输入一个长度介于<span
+  lang=EN-US> {0} </span>和<span lang=EN-US> {1} </span>之间的字符串</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * @param {String}
+  p... </span><span style='font-family:宋体'>可变参数</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         *
+  @returns {String} </span><span style='font-family:宋体'>替换后的字符串</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         */</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.46%;border:solid #4F81BD 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>hanzi2pinyin</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.54%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>        /**</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span><span
+  style='font-family:宋体'>汉字转拼音</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * @param
+  {String} haizi </span><span style='font-family:宋体'>需要转换的汉字。</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * @param
+  {Boolean} onlyCaption </span><span style='font-family:宋体'>只需要首字母。</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         *
+  @returns {String} </span><span style='font-family:宋体'>拼音</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         */</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.46%;border:solid #4F81BD 1.0pt;
+  border-top:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>isNumber</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.54%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>        /**</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span><span
+  style='font-family:宋体'>判断是否为<span lang=EN-US>Number</span>类型</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * @param
+  {Object} v </span><span style='font-family:宋体'>待检测值</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         *
+  @returns {Boolean} true</span><span style='font-family:宋体'>表示是<span
+  lang=EN-US>Number</span>类型。</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         */</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.46%;border:solid #4F81BD 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>isString</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.54%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>        /**</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span><span
+  style='font-family:宋体'>判断是否为<span lang=EN-US>String</span>类型</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * @param
+  {Object} v </span><span style='font-family:宋体'>待检测值</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         *
+  @returns {Boolean} true</span><span style='font-family:宋体'>表示是<span
+  lang=EN-US>String</span>类型。</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         */</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.46%;border:solid #4F81BD 1.0pt;
+  border-top:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>isBoolean</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.54%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>        /**</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span><span
+  style='font-family:宋体'>判断是否为<span lang=EN-US>Boolean</span>类型</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * @param
+  {Object} v </span><span style='font-family:宋体'>待检测值</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         *
+  @returns {Boolean} true</span><span style='font-family:宋体'>表示是<span
+  lang=EN-US>String</span>类型。</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         */</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.46%;border:solid #4F81BD 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>intevalDays</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.54%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>        /**</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span><span
+  style='font-family:宋体'>两个日期相差的天数</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * @param
+  startDateStr </span><span style='font-family:宋体'>开始日期</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * @param
+  endDateStr </span><span style='font-family:宋体'>结束日期</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         *
+  @returns </span><span style='font-family:宋体'>相差天数</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         */</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.46%;border:solid #4F81BD 1.0pt;
+  border-top:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>resize</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.54%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>        /**</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span><span
+  style='font-family:宋体'>触发窗口改变事件</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span><span
+  style='font-family:宋体'>使用之处：</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         *
+  smile.ui.odialog.js</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         *
+  smile.ui.otabs.js</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         */</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.46%;border:solid #4F81BD 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>isScroll</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.54%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>        /**</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span><span
+  style='font-family:宋体'>检测元素是否有滚动条</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * @param
+  el </span><span style='font-family:宋体'>带检测元素</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         *
+  @returns {Object}</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         */</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.46%;border:solid #4F81BD 1.0pt;
+  border-top:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>obutton</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.54%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>        /**</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span><span
+  style='font-family:宋体'>将普通<span lang=EN-US>button</span>美化成<span lang=EN-US>obutton</span>组件。</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span><span
+  style='font-family:宋体'>此方法会自动调用，但是如果<span lang=EN-US>button</span>为动态创建，则需要手动调用此方法。</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * @param
+  context </span><span style='font-family:宋体'>范围，美化范围内的<span lang=EN-US>button</span>，缩小范围可以提高效率，如果<span
+  lang=EN-US>context</span>未定义，则取<span lang=EN-US>document.body</span>。</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         */</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.46%;border:solid #4F81BD 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>createVtypeAlias</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.54%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>        /**</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span><span
+  style='font-family:宋体'>创建校验别名，提供给<span lang=EN-US>Smile</span>输入域组件校验数据使用，可参见输入域组件<span
+  lang=EN-US>vtypeAlias</span>选项。</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span><span
+  style='font-family:宋体'>将创建的校验规则下挂在<span lang=EN-US>$.smile.vtypes</span>中</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * </span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * @param
+  {String} alias </span><span style='font-family:宋体'>校验别名</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         * @param
+  {Object} rules </span><span style='font-family:宋体'>校验规则，<span lang=EN-US>Smile.vtypes</span>中基本校验规则组合使用</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>         */</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-size:15.0pt;font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:15.0pt;font-family:宋体'>校验类型</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>使用说明：</span></p>
+
+<p class=MsoNormal><span lang=EN-US>         </span><span style='font-family:
+宋体'>需要结合其他</span><span lang=EN-US>Smile</span><span style='font-family:宋体'>域组件一起使用，详细请参见</span><span
+lang=EN-US>Smile</span><span style='font-family:宋体'>输入域组件</span><span
+lang=EN-US>vtype</span><span style='font-family:宋体'>属性。</span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>注意：如</span><span lang=EN-US
+style='font-family:宋体'>rangeLength</span><span style='font-family:宋体'>、<span
+lang=EN-US>range</span>等参数为数组，<span lang=EN-US>0</span>、<span lang=EN-US>1</span>号元素指明范围。</span></p>
+
+<p class=MsoNormal><a name="OLE_LINK4"></a><a name="OLE_LINK3"><span
+lang=EN-US>&nbsp;</span></a></p>
+
+<table class=-111 border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.48%;border:solid #4F81BD 1.0pt;
+  border-bottom:solid #4F81BD 2.25pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:宋体'>规则名</span></b></p>
+  </td>
+  <td width="89%" valign=top style='width:89.52%;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 2.25pt;border-right:solid #4F81BD 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:宋体'>描述</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.48%;border:solid #4F81BD 1.0pt;
+  border-top:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><a name="OLE_LINK10"></a><a name="OLE_LINK9"><span
+  lang=EN-US style='font-family:宋体'>email</span></a></p>
+  </td>
+  <td width="89%" valign=top style='width:89.52%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>请输入正确的<span lang=EN-US>email</span>地址，例如：<span
+  lang=EN-US>user@example.com</span></span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.48%;border:solid #4F81BD 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>url</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.52%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>请输入正确的<span lang=EN-US>url</span>地址，例如：<span
+  lang=EN-US>http://www.example.com</span></span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.48%;border:solid #4F81BD 1.0pt;
+  border-top:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>minLength</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.52%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>请输入一个长度最少是<span lang=EN-US>
+  {0} </span>的字符串</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.48%;border:solid #4F81BD 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>maxLength</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.52%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>请输入一个长度最多是<span lang=EN-US>
+  {0} </span>的字符串</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.48%;border:solid #4F81BD 1.0pt;
+  border-top:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>rangeLength</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.52%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>请输入一个长度介于<span lang=EN-US>
+  {0} </span>和<span lang=EN-US> {1} </span>之间的字符串</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.48%;border:solid #4F81BD 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>min</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.52%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>请输入一个最小为<span lang=EN-US> {0}
+  </span>的值</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.48%;border:solid #4F81BD 1.0pt;
+  border-top:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>max</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.52%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>请输入一个最大为<span lang=EN-US> {0}
+  </span>的值</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.48%;border:solid #4F81BD 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><a name="OLE_LINK8"></a><a name="OLE_LINK7"><span
+  lang=EN-US style='font-family:宋体'>range</span></a></p>
+  </td>
+  <td width="89%" valign=top style='width:89.52%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>请输入一个介于<span lang=EN-US> {0} </span>和<span
+  lang=EN-US> {1} </span>之间的值</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.48%;border:solid #4F81BD 1.0pt;
+  border-top:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>date</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.52%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>请输入合法的日期，格式：<span lang=EN-US>yyyy-mm-dd</span>，例如：<span
+  lang=EN-US>2012-01-01</span></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:21.0pt;text-indent:-21.0pt'><span
+lang=EN-US style='font-size:15.0pt;font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:15.0pt;font-family:宋体'>消息提示框</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:宋体'>使用说明：</span></p>
+
+<p class=MsoNormal><span lang=EN-US>         Smile.box.dlgType(options);</span></p>
+
+<p class=MsoNormal><span lang=EN-US>         </span><span style='font-family:
+宋体'>例如：</span></p>
+
+<p class=MsoNormal><span lang=EN-US>         Smile.box.info({</span></p>
+
+<p class=MsoNormal><span lang=EN-US>                   content: “</span><span
+style='font-family:宋体'>这里是提示信息哦</span><span lang=EN-US>!”</span></p>
+
+<p class=MsoNormal style='text-indent:21.0pt'><span lang=EN-US>});</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<table class=-111 border=1 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse;border:none'>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.48%;border:solid #4F81BD 1.0pt;
+  border-bottom:solid #4F81BD 2.25pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:宋体'>提示框类型</span></b></p>
+  </td>
+  <td width="89%" valign=top style='width:89.52%;border-top:solid #4F81BD 1.0pt;
+  border-left:none;border-bottom:solid #4F81BD 2.25pt;border-right:solid #4F81BD 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:宋体'>描述</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.48%;border:solid #4F81BD 1.0pt;
+  border-top:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>dlg</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.52%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>通用提示框</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>        /*</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>        {</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>            title:
+  &quot;</span><span style='font-family:宋体'>信息<span lang=EN-US>&quot;,</span></span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>            content:
+  &quot;</span><span style='font-family:宋体'>请填写提示信息内容<span lang=EN-US>!&quot;,</span></span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>            ok:
+  $.noop, // </span><span style='font-family:宋体'>点击确定是触发。</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>            cancel:
+  $.noop // </span><span style='font-family:宋体'>点击取消时触发，<span lang=EN-US>confirm</span>时有效。</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>        }</span></p>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>        */</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.48%;border:solid #4F81BD 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>success</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.52%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>成功提示框，选项同上。</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.48%;border:solid #4F81BD 1.0pt;
+  border-top:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><a name="OLE_LINK6"></a><a name="OLE_LINK5"><span
+  lang=EN-US style='font-family:宋体'>info</span></a></p>
+  </td>
+  <td width="89%" valign=top style='width:89.52%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>信息提示框，选项同上。</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.48%;border:solid #4F81BD 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>alert</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.52%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>警告对话框，选项同上。</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.48%;border:solid #4F81BD 1.0pt;
+  border-top:none;background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>confirm</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.52%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  background:#D3DFEE;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>确认对话框，选项同上。</span></p>
+  </td>
+ </tr>
+ <tr style='height:13.25pt'>
+  <td width="10%" valign=top style='width:10.48%;border:solid #4F81BD 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-family:宋体'>error</span></p>
+  </td>
+  <td width="89%" valign=top style='width:89.52%;border-top:none;border-left:
+  none;border-bottom:solid #4F81BD 1.0pt;border-right:solid #4F81BD 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:13.25pt'>
+  <p class=MsoNormal><span style='font-family:宋体'>错误提示框，选项同上。</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

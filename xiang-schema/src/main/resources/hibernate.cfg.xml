@@ -1,0 +1,108 @@
+<!DOCTYPE hibernate-configuration PUBLIC 
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+
+		<!-- 
+			org.hibernate.dialect.SybaseDialect
+			org.hibernate.dialect.MySQL5Dialect
+			org.hibernate.dialect.SQLServerDialect
+		 -->
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.Oracle10gDialect
+		</property>
+		<property name="hibernate.connection.url">
+			jdbc:oracle:thin:@localhost:1521:omega
+		</property>
+		<property name="hibernate.connection.driver_class">
+			oracle.jdbc.OracleDriver
+		</property>
+		<property name="hibernate.connection.username">xiang</property>
+		<property name="hibernate.connection.password">xiang123</property>
+
+		<property name="hibernate.current_session_context_class">thread</property>
+		
+<!-- 		<property name="hibernate.show_sql">false</property> -->
+		<property name="hibernate.format_sql">true</property>
+		
+		<property name="hibernate.hbm2ddl.import_files_sql_extractor">
+			org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
+		</property>
+		<!-- 
+		Comma-separated names of the optional files containing SQL DML statements 
+		executed during the SessionFactory creation. This is useful for testing or 
+		demoing: by adding INSERT statements for example you can populate your database 
+		with a minimal set of data when it is deployed. File order matters, the statements 
+		of a give file are executed before the statements of the following files. 
+		These statements are only executed if the schema is created ie if hibernate.hbm2ddl.auto 
+		is set to create or create-drop. e.g. /humans.sql,/dogs.sql 
+		-->
+		<!-- 	
+		批处理建表语句(Oracle)：
+		com/yangfan/xiang/schema/batch/schema-oracle10g.sql
+		 -->
+		 <!-- -->
+		<property name="hibernate.hbm2ddl.import_files">
+			com/yangfan/xiang/schema/demo/emp/DEPT.sql,
+			com/yangfan/xiang/schema/demo/emp/SALGRADE.sql,
+			com/yangfan/xiang/schema/demo/emp/EMP.sql,
+			
+			com/yangfan/xiang/schema/demo/dict/DICTTYPE.sql,
+			com/yangfan/xiang/schema/demo/dict/DICT.sql,
+			
+			com/yangfan/xiang/schema/demo/order/CUSTOMER.sql,
+			com/yangfan/xiang/schema/demo/order/PRODUCT.sql,
+			
+			com/yangfan/xiang/schema/demo/work/AUTHOR.sql
+		</property>
+		
+		<!-- 列出所有实体类 -->
+		
+		<!-- abc
+		<mapping class="com.yangfan.xiang.domain.demo.abc.Foo" />
+		 -->
+		
+		<!-- 雇员
+		<mapping class="com.yangfan.xiang.domain.demo.emp.Dept" />
+		<mapping class="com.yangfan.xiang.domain.demo.emp.Emp" />
+		<mapping class="com.yangfan.xiang.domain.demo.emp.SalGrade" />
+		 -->
+		<!-- 字典
+		<mapping class="com.yangfan.xiang.domain.demo.dict.DictType" />
+		<mapping class="com.yangfan.xiang.domain.demo.dict.Dict" />
+		 -->
+		<!-- 订单
+		<mapping class="com.yangfan.xiang.domain.demo.order.Customer" />
+		<mapping class="com.yangfan.xiang.domain.demo.order.Order" />
+		<mapping class="com.yangfan.xiang.domain.demo.order.Product" />
+		<mapping class="com.yangfan.xiang.domain.demo.order.LineItem" />
+		 -->
+		<!-- 雇佣 
+		<mapping class="com.yangfan.xiang.domain.demo.employment.Employer" />
+		<mapping class="com.yangfan.xiang.domain.demo.employment.Employee" />
+		<mapping class="com.yangfan.xiang.domain.demo.employment.Employment" />
+		<mapping class="com.yangfan.xiang.domain.demo.employment.MonetaryAmount" />
+		<mapping class="com.yangfan.xiang.domain.demo.employment.Name" />
+		-->
+		<!-- 作品 
+		<mapping class="com.yangfan.xiang.domain.demo.work.Author" />
+		<mapping class="com.yangfan.xiang.domain.demo.work.Book" />
+		<mapping class="com.yangfan.xiang.domain.demo.work.Person" />
+		<mapping class="com.yangfan.xiang.domain.demo.work.Song" />
+		<mapping class="com.yangfan.xiang.domain.demo.work.Work" />
+		-->
+		
+		<!-- 工作日 -->
+		<mapping class="com.yangfan.xiang.domain.demo.workingcalendar.CurrentWorkingCalendar" />
+		<mapping class="com.yangfan.xiang.domain.demo.workingcalendar.Param" />
+		<mapping class="com.yangfan.xiang.domain.demo.workingcalendar.ParamType" />
+		<mapping class="com.yangfan.xiang.domain.demo.workingcalendar.WorkingCalendar" />
+		<mapping class="com.yangfan.xiang.domain.demo.workingcalendar.WorkingCalendarDefinition" />
+		<mapping class="com.yangfan.xiang.domain.demo.workingcalendar.WorkingCalendarType" />
+		
+	</session-factory>
+
+</hibernate-configuration>

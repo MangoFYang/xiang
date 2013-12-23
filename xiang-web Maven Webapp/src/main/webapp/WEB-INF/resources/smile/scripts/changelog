@@ -1,0 +1,48 @@
+
+jqgrid，下文中的行号可能由于修改而不准确。
+1.在cell编辑状态下单击单元格直接进入编辑状态，修改为进入选中状态，点击编辑按钮在进入编辑状态。
+	源码中2409行：try {$(ts).jqGrid("editCell",ri,ci,true);} catch (_) {}，修改为：try {$(ts).jqGrid("editCell",ri,ci,false);} catch (_) {}
+2.在cell编辑状态下保存校验失败后单元格从编辑状态恢复到选中状态，修改为保持原来的编辑状态状态。
+	源码中9742行：注释掉，// $($t).jqGrid("restoreCell",iRow,iCol);
+3.在cell编辑状态下，当焦点离开单元格时，编辑内容会自动保存，修改为不保存。
+	源码中9516行：$($t).jqGrid("saveCell",$t.p.savedRow[0].id,$t.p.savedRow[0].ic);修改为：$($t).jqGrid("restoreCell",$t.p.savedRow[0].id,$t.p.savedRow[0].ic);
+
+4.	
+时间戳格式化成字符串格式后显示太离谱了，jqgrid主要是支持这php，而php和java在时间戳上有区别， php里面，
+时间戳用10位数字表示，精确到秒， java里面，时间戳用13位数字表示，精确到毫秒。
+    if( !isNaN( date - 0 ) && String(format).toLowerCase() == "u") {  
+    //Unix timestamp  
+    timestamp = new Date( parseFloat(date)*1000 );  
+    }   
+再找，也没看见其他处理时间戳的地方，跟踪js代码，对于从后台拿到的13位时间戳数据也会进入到这里，
+在乘以1000就编程了16位，这就导致了比原本时间大了很多。 于是乎就修改这一段，如下
+    if( !isNaN( date - 0 ) && String(format).toLowerCase() == "u") {  
+    //Unix timestamp  
+    timestamp = new Date( parseFloat(date) );  
+    }
+修改后，一切显示正常， 如："2012-04-07 18:13:00"。 
+
+5.
+冻结列上单击右键或双击左键抛异常的BUG修正
+2479行：将if ($.isFunction(this.p.ondblClickRow)) { ts.p.ondblClickRow.call(ts,$(ptr).attr("id"),ri,ci, e); } 改为： if ($.isFunction(ts.p.ondblClickRow)) { ts.p.ondblClickRow.call(ts,$(ptr).attr("id"),ri,ci, e); }
+2489行：将if ($.isFunction(this.p.onRightClickRow)) { ts.p.onRightClickRow.call(ts,$(ptr).attr("id"),ri,ci, e); } 改为：if ($.isFunction(ts.p.onRightClickRow)) { ts.p.onRightClickRow.call(ts,$(ptr).attr("id"),ri,ci, e); }
+
+/*
+6.
+冻结列未对齐修正
+4188行：top样式减1
+$t.grid.fhDiv = $('<div style="position:absolute;left:0px;top:'+ (top - 1) +'px;height:'+hth+'px;" class="frozen-div ui-state-default ui-jqgrid-hdiv"></div>');
+$t.grid.fbDiv = $('<div style="position:absolute;left:0px;top:'+(parseInt(top,10)+parseInt(hth,10))+'px;overflow-y:hidden" class="frozen-bdiv ui-jqgrid-bdiv"></div>');
+*/		
+
+一般组件的基础功能：
+1.设置默认值(value选项)
+2.输入值(界面输入、编程输入)
+3.获取值(界面获取、编程获取)
+4.清空
+5.重置为默认值
+6.只读
+7.失效/启用
+
+注意：
+1.必填字段一定要设置默认值

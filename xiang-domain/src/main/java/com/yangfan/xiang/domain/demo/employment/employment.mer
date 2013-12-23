@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ERDiagram version="1.1">
+  <Connection session="oracle.jdbc.OracleDriver" database="XIANG" />
+  <Drawing gridVisible="false" snapOn="false" fastRouting="false" labelsVisible="true" />
+  <Tables>
+    <Table name="DEMO_EMPLOYEE">
+      <Drawing expanded="true" location="647,317" dimensions="246,171" />
+      <Columns>
+        <Column name="ID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="VARCHAR2" size="255" />
+        </Column>
+        <Column name="STATUS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="1" />
+        </Column>
+        <Column name="VERSION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="FULLSPELL" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="255" />
+        </Column>
+        <Column name="NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="255" />
+        </Column>
+        <Column name="SHORTSPELL" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="255" />
+        </Column>
+        <Column name="TAXFILENUMBER" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="DEMO_EMPLOYER">
+      <Drawing expanded="true" location="49,323" dimensions="220,151" />
+      <Columns>
+        <Column name="ID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="VARCHAR2" size="255" />
+        </Column>
+        <Column name="STATUS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="1" />
+        </Column>
+        <Column name="VERSION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="FULLSPELL" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="255" />
+        </Column>
+        <Column name="NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="255" />
+        </Column>
+        <Column name="SHORTSPELL" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+    <Table name="DEMO_EMPLOYMENT">
+      <Drawing expanded="true" location="321,57" dimensions="257,211" />
+      <Columns>
+        <Column name="ID" primary_key="true" foreign_key="false" required="true" unique="true">
+          <Data type="VARCHAR2" size="255" />
+        </Column>
+        <Column name="STATUS" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="1" />
+        </Column>
+        <Column name="VERSION" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="10" />
+        </Column>
+        <Column name="ENDDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="TIMESTAMP(6)" size="10,6" />
+        </Column>
+        <Column name="AMOUNT" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="NUMBER" size="10,2" />
+        </Column>
+        <Column name="CURRENCY" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="VARCHAR2" size="255" />
+        </Column>
+        <Column name="STARTDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+          <Data type="TIMESTAMP(6)" size="10,6" />
+        </Column>
+        <Column name="EMPLOYEE_ID" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="VARCHAR2" size="255" />
+        </Column>
+        <Column name="EMPLOYER_ID" primary_key="false" foreign_key="true" required="true" unique="false">
+          <Data type="VARCHAR2" size="255" />
+        </Column>
+      </Columns>
+    </Table>
+  </Tables>
+  <Relationships>
+    <Relationship name="FK441A73C89E724E8D">
+      <Details primary_table="DEMO_EMPLOYER" foreign_table="DEMO_EMPLOYMENT">
+        <PrimaryKeys>
+          <ColumnName name="ID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="EMPLOYER_ID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+    <Relationship name="FK441A73C89E6C65AD">
+      <Details primary_table="DEMO_EMPLOYEE" foreign_table="DEMO_EMPLOYMENT">
+        <PrimaryKeys>
+          <ColumnName name="ID" />
+        </PrimaryKeys>
+        <ForeignKeys>
+          <ColumnName name="EMPLOYEE_ID" />
+        </ForeignKeys>
+      </Details>
+      <Drawing routingType="0" />
+    </Relationship>
+  </Relationships>
+</ERDiagram>
+
