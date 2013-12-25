@@ -12,6 +12,8 @@ public class IndexController {
 	 * 
 	 * change this for test
 	 * 
+	 * create conflict
+	 * 
 	 */
 	@RequestMapping("/index")
 	public String index() {
