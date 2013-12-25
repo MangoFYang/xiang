@@ -11,11 +11,4 @@ public class IndexController {
 		return "/index";
 	}
 	
-	
-	
-	
-	public String bbb() {
-		return null;
-	}
-	
 }
