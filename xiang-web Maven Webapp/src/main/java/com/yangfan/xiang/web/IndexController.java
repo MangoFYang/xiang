@@ -10,6 +10,8 @@ public class IndexController {
 	 * 
 	 * mapping for index
 	 * 
+	 * change this for test
+	 * 
 	 */
 	@RequestMapping("/index")
 	public String index() {
