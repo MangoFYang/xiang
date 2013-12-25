@@ -18,4 +18,8 @@ public class IndexController {
 		return "/index";
 	}
 	
+	public String test() {
+		return null;
+	}
+	
 }
