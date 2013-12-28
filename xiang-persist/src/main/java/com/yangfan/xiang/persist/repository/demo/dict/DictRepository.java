@@ -17,7 +17,7 @@ public interface DictRepository extends CoreRepository<Dict, String> {
 	 * @return
 	 */
 	@Query("select d from DEMO_DICT d where d.dictType.type = :dictType")
-	List<Dict> findByDictType(@Param("dictType") String dictType);
+	List<Dict> findByDictType_type(@Param("dictType") String dictType);
 	
 	/**
 	 * 查询所有数据字典，并抓取对应的字典类型。

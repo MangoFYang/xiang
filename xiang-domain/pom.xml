@@ -7,25 +7,15 @@
 
 	<parent>
 		<groupId>com.yangfan.xiang</groupId>
-		<artifactId>xiang-aggregator</artifactId>
+		<artifactId>xiang-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../xiang-aggregator</relativePath>
 	</parent>
 
 	<dependencies>
-		<!-- hibernate -->
 		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.yangfan.xiang</groupId>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>xiang-core</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 

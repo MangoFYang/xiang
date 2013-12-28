@@ -5,7 +5,11 @@
 	<packaging>war</packaging>
 	<name>xiang-web Maven Webapp</name>
 
-
+	<parent>
+		<groupId>com.yangfan.xiang</groupId>
+		<artifactId>xiang-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
 
 	<build>
 		<finalName>xiang-web</finalName>
@@ -86,66 +90,31 @@
 	</build>
 
 	<dependencies>
-		<!-- 测试 -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-		</dependency>
-		<!-- servlet jsp -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>jsp-api</artifactId>
-        </dependency>
-		<!-- jstl -->
-		<dependency>
-			<groupId>javax.servlet.jsp.jstl</groupId>
-			<artifactId>jstl-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.glassfish.web</groupId>
-			<artifactId>jstl-impl</artifactId>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.yangfan.xiang</groupId>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>xiang-core</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.yangfan.xiang</groupId>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>xiang-domain</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.yangfan.xiang</groupId>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>xiang-persist</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.yangfan.xiang</groupId>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>xiang-service</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.yangfan.xiang</groupId>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>xiang-schema</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
-
-	<parent>
-		<groupId>com.yangfan.xiang</groupId>
-		<artifactId>xiang-aggregator</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../xiang-aggregator</relativePath>
-	</parent>
 
 </project>

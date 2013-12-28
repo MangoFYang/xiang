@@ -1,8 +1,8 @@
 package com.yangfan.xiang.schema.demo.emp;
 
-import org.apache.commons.lang.StringUtils;
 import org.springframework.batch.item.file.mapping.FieldSetMapper;
 import org.springframework.batch.item.file.transform.FieldSet;
+import org.springframework.util.StringUtils;
 import org.springframework.validation.BindException;
 
 import com.yangfan.xiang.domain.demo.emp.Dept;

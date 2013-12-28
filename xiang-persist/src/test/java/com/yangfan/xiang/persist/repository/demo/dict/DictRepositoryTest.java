@@ -28,7 +28,7 @@ public class DictRepositoryTest {
 	@Test
 	@Transactional
 	public void testFindByDictType() {
-		List<Dict> findByDictType = dictRepository.findByDictType("FourAccId");
+		List<Dict> findByDictType = dictRepository.findByDictType_type("FourAccId");
 		for (Dict dict : findByDictType) {
 			System.out.println(dict);
 		}
