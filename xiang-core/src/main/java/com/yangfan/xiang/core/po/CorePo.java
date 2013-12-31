@@ -1,4 +1,4 @@
-package com.yangfan.xiang.core.domain;
+package com.yangfan.xiang.core.po;
 
 import java.io.Serializable;
 
@@ -10,13 +10,14 @@ import org.hibernate.annotations.GenericGenerator;
 
 /**
  * 
- * 支持id和status属性的Domain抽象类，如果不需要乐观锁时可继承此类，需要乐观锁时继承CoreDomain
+ * 支持id和status属性的酷睿Po抽象类，
+ * 如果不需要乐观锁时可继承此类，需要乐观锁时继承VersionPo
  * 
  * @author 杨帆
  *
  */
 @MappedSuperclass
-public abstract class IdDomain implements Serializable {
+public abstract class CorePo implements Serializable {
 	
 	/**
 	 * 
@@ -34,7 +35,7 @@ public abstract class IdDomain implements Serializable {
 	/**
 	 * 状态，有效/无效。
 	 */
-	protected Boolean status = true;
+	protected Boolean status;
 
 	/**
 	 * 主键
@@ -73,15 +74,6 @@ public abstract class IdDomain implements Serializable {
 	}
 
 	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("IdDomain [id=").append(id).append(", status=")
-				.append(status).append(", toString()=")
-				.append(super.toString()).append("]");
-		return builder.toString();
-	}
-
-	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -98,7 +90,7 @@ public abstract class IdDomain implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		IdDomain other = (IdDomain) obj;
+		CorePo other = (CorePo) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -112,4 +104,17 @@ public abstract class IdDomain implements Serializable {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("CorePo [id=");
+		builder.append(id);
+		builder.append(", status=");
+		builder.append(status);
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
+	}
+	
 }

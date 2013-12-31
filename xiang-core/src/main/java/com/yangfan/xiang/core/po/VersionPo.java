@@ -1,11 +1,13 @@
-package com.yangfan.xiang.core.domain;
+package com.yangfan.xiang.core.po;
 
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Version;
 
 /**
  * 
- * 酷睿Domain抽象类
+ * VersionPo抽象类
+ * 
+ * 支持乐观锁
  * 
  * 内置属性:
  * id: 标识，使用UUID。
@@ -16,7 +18,7 @@ import javax.persistence.Version;
  *
  */
 @MappedSuperclass
-public abstract class CoreDomain extends IdDomain {
+public abstract class VersionPo extends CorePo {
 	
 	private static final long serialVersionUID = -2561720478176048205L;
 
@@ -45,11 +47,11 @@ public abstract class CoreDomain extends IdDomain {
 	}
 
 	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("CoreDomain [version=").append(version)
-				.append(", toString()=").append(super.toString()).append("]");
-		return builder.toString();
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + ((version == null) ? 0 : version.hashCode());
+		return result;
 	}
 
 	@Override
@@ -60,7 +62,7 @@ public abstract class CoreDomain extends IdDomain {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		CoreDomain other = (CoreDomain) obj;
+		VersionPo other = (VersionPo) obj;
 		if (version == null) {
 			if (other.version != null)
 				return false;
@@ -69,4 +71,15 @@ public abstract class CoreDomain extends IdDomain {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("VersionPo [version=");
+		builder.append(version);
+		builder.append(", toString()=");
+		builder.append(super.toString());
+		builder.append("]");
+		return builder.toString();
+	}
+	
 }
