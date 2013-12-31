@@ -8,6 +8,12 @@ public class ReturnVo implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -4189862821316647482L;
+	
+	private boolean success;
+	
+	private String message;
+	
+	private Object otherData;
 
 	public ReturnVo() {
 	}
@@ -22,19 +28,19 @@ public class ReturnVo implements Serializable {
 		this.success = success;
 		this.message = message;
 	}
+	
+	public ReturnVo(boolean success, Object otherData) {
+		super();
+		this.success = success;
+		this.otherData = otherData;
+	}
 
-	public ReturnVo(boolean success, String message, Object otherInfo) {
+	public ReturnVo(boolean success, String message, Object otherData) {
 		super();
 		this.success = success;
 		this.message = message;
-		this.otherInfo = otherInfo;
+		this.otherData = otherData;
 	}
-
-	private boolean success;
-	
-	private String message;
-	
-	private Object otherInfo;
 
 	public boolean isSuccess() {
 		return success;
@@ -52,12 +58,12 @@ public class ReturnVo implements Serializable {
 		this.message = message;
 	}
 
-	public Object getOtherInfo() {
-		return otherInfo;
+	public Object getOtherData() {
+		return otherData;
 	}
 
-	public void setOtherInfo(Object otherInfo) {
-		this.otherInfo = otherInfo;
+	public void setOtherData(Object otherData) {
+		this.otherData = otherData;
 	}
-	
+
 }
