@@ -24,7 +24,7 @@
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
 				<property name="generateDdl" value="false" />
-				<property name="databasePlatform" value="org.hibernate.dialect.DerbyTenSevenDialect"></property>
+				<property name="databasePlatform" value="${database.dialect}"></property>
 			</bean>
 		</property>
 		<property name="jpaProperties">
@@ -32,7 +32,7 @@
 				<prop key="javax.persistence.validation.mode">none</prop>
 <!-- 				<prop key="hibernate.show_sql">true</prop> -->
 				<prop key="hibernate.format_sql">true</prop>
- 				<prop key="hibernate.hbm2ddl.auto">update</prop>
+ 				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
 			</props>
 		</property>
 		<!-- 扫描所有Domain -->

@@ -31,13 +31,13 @@ public class FooRepositoryTest extends BaseRepositoryTest {
 	@Test
 	public final void testSaveAndFlush() {
 		Foo foo = new Foo();
-		// foo.setBigDecimalField(new BigDecimal(1.23));
+		foo.setBigDecimalField(new BigDecimal("3.693693"));
 		foo.setDateField(new Date());
 		foo.setDoubleBoxField(1.2);
-		foo.setDoubleField(1.23);
-		foo.setIntegerField(1000);
-		foo.setIntField(22);
-		foo.setStringField("str");
+		foo.setDoubleField(1.999);
+		foo.setIntegerField(9000);
+		foo.setIntField(999);
+		foo.setStringField("111strstr111");
 		Foo saveAndFlush = fooRepository.saveAndFlush(foo);
 		assertNotNull(saveAndFlush);
 	}
