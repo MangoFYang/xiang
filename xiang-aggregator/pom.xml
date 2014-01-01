@@ -1,29 +1,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<groupId>com.yangfan.xiang</groupId>
 	<artifactId>xiang-aggregator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<url>http://maven.apache.org</url>
-
-	<distributionManagement>
-		<site>
-			<id>website</id>
-			<url>scp://webhost.company.com/www/website</url>
-		</site>
-	</distributionManagement>
+	<name>xiang-aggregator</name>
+	<description>xiang-aggregator</description>
+	<url>https://github.com/MangoFYang/xiang</url>
 
 	<modules>
 		<module>../xiang-parent</module>
 		<module>../xiang-core</module>
-		<module>../xiang-domain</module>
+		<module>../xiang-model</module>
 		<module>../xiang-persist</module>
 		<module>../xiang-service</module>
 		<module>../xiang-web Maven Webapp</module>
-		
-		<module>../xiang-schema</module>
 	</modules>
 
 </project>

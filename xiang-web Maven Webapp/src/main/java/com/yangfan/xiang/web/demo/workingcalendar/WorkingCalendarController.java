@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.yangfan.xiang.domain.demo.workingcalendar.WorkingCalendar;
+import com.yangfan.xiang.core.vo.ReturnVo;
+import com.yangfan.xiang.model.po.demo.workingcalendar.WorkingCalendar;
 import com.yangfan.xiang.service.iface.demo.workingcalendar.WorkingCalendarService;
 import com.yangfan.xiang.service.iface.demo.workingcalendar.WorkingCalendarTypeService;
-import com.yangfan.xiang.vo.Return2Web;
 
 @Controller
 @RequestMapping("/demo/WorkingCalendarController")
@@ -41,18 +41,18 @@ public class WorkingCalendarController {
 	
 	@RequestMapping("/buildWorkingDateFromStartDateAndEndDate")
 	@ResponseBody
-	public Return2Web buildWorkingDateFromStartDateAndEndDate(Long workingCalendarTypeId, String startDateStr, String endDateStr) {
-		Return2Web r2w = new Return2Web();
+	public ReturnVo buildWorkingDateFromStartDateAndEndDate(Long workingCalendarTypeId, String startDateStr, String endDateStr) {
+		ReturnVo r = new ReturnVo();
 		try {
 			workingCalendarService.buildWorkingDateFromStartDateAndEndDate(workingCalendarTypeId, startDateStr, endDateStr);
-			r2w.setSuccess(true);
+			r.setSuccess(true);
 		} catch(Exception e) {
-			r2w.setSuccess(false);
-			r2w.setMessage(e.getMessage());
-			r2w.setOtherInfo(e);
+			r.setSuccess(false);
+			r.setMessage(e.getMessage());
+			r.setOtherData(e);
 			e.printStackTrace();
 		}
-		return r2w;
+		return r;
 	}
 
 }

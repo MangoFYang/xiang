@@ -12,9 +12,18 @@
 	</parent>
 
 	<dependencies>
+		
+		<!-- demo start -->
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>xiang-domain</artifactId>
+			<artifactId>xiang-demo-service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<!-- demo end -->
+		
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>xiang-model</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
@@ -27,9 +36,7 @@
 			<artifactId>xiang-core</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		
 	</dependencies>
-
-	
-
 	
 </project>

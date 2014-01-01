@@ -13,15 +13,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.yangfan.xiang.domain.demo.workingcalendar.Param;
-import com.yangfan.xiang.domain.demo.workingcalendar.ParamType;
-import com.yangfan.xiang.domain.demo.workingcalendar.WorkingCalendarDefinition;
-import com.yangfan.xiang.domain.demo.workingcalendar.WorkingCalendarType;
+import com.yangfan.xiang.core.vo.ReturnVo;
+import com.yangfan.xiang.model.po.demo.workingcalendar.Param;
+import com.yangfan.xiang.model.po.demo.workingcalendar.ParamType;
+import com.yangfan.xiang.model.po.demo.workingcalendar.WorkingCalendarDefinition;
+import com.yangfan.xiang.model.po.demo.workingcalendar.WorkingCalendarType;
 import com.yangfan.xiang.service.iface.demo.workingcalendar.ParamService;
 import com.yangfan.xiang.service.iface.demo.workingcalendar.ParamTypeService;
 import com.yangfan.xiang.service.iface.demo.workingcalendar.WorkingCalendarDefinitionService;
 import com.yangfan.xiang.service.iface.demo.workingcalendar.WorkingCalendarTypeService;
-import com.yangfan.xiang.vo.Return2Web;
 
 @Controller
 @RequestMapping("/demo/WorkingCalendarMaintainController")
@@ -107,18 +107,18 @@ public class WorkingCalendarMaintainController {
 	
 	@RequestMapping("/addWorkingCalendarType")
 	@ResponseBody
-	public Return2Web addWorkingCalendarType(WorkingCalendarType workingCalendarType) {
-		Return2Web r2w = new Return2Web();
+	public ReturnVo addWorkingCalendarType(WorkingCalendarType workingCalendarType) {
+		ReturnVo r = new ReturnVo();
 		try {
 			workingCalendarTypeService.addWorkingCalendarType(workingCalendarType);
-			r2w.setSuccess(true);
+			r.setSuccess(true);
 		} catch(Exception e) {
-			r2w.setSuccess(false);
-			r2w.setMessage(e.getMessage());
-			r2w.setOtherInfo(e);
+			r.setSuccess(false);
+			r.setMessage(e.getMessage());
+			r.setOtherData(e);
 			e.printStackTrace();
 		}
-		return r2w;
+		return r;
 	}
 	
 }

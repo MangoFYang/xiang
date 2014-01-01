@@ -14,12 +14,12 @@
 	<dependencies>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>xiang-domain</artifactId>
+			<artifactId>xiang-core</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>xiang-core</artifactId>
+			<artifactId>xiang-model</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>

@@ -8,8 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.yangfan.xiang.core.vo.TreeNodeVo;
 import com.yangfan.xiang.service.iface.demo.authority.MenuService;
-import com.yangfan.xiang.vo.demo.TreeNode;
 
 @Controller
 @RequestMapping("/demo/ViewportController")
@@ -20,8 +20,8 @@ public class ViewportController {
 
 	@RequestMapping("/navigator")
 	@ResponseBody
-	public List<TreeNode> navigator() {
-		List<TreeNode> menuTree = menuService.buildMenuTree();
+	public List<TreeNodeVo> navigator() {
+		List<TreeNodeVo> menuTree = menuService.buildMenuTree();
 		return menuTree;
 	}
 	
