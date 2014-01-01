@@ -24,7 +24,7 @@
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
 				<property name="generateDdl" value="false" />
-				<property name="databasePlatform" value="org.hibernate.dialect.Oracle10gDialect"></property>
+				<property name="databasePlatform" value="org.hibernate.dialect.DerbyTenSevenDialect"></property>
 			</bean>
 		</property>
 		<property name="jpaProperties">
@@ -36,7 +36,7 @@
 			</props>
 		</property>
 		<!-- 扫描所有Domain -->
-		<property name="packagesToScan" value="com.yangfan.xiang.domain"></property>
+		<property name="packagesToScan" value="com.yangfan.xiang.model.po"></property>
 	</bean>
 
 	<!-- 扫描所有Spring Data Repository -->

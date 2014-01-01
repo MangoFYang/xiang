@@ -2,10 +2,8 @@ package com.yangfan.xiang.model.po.demo.work;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Entity
-@Table(name="DEMO_SONG")
 @DiscriminatorValue("S")
 public class Song extends Work {
 

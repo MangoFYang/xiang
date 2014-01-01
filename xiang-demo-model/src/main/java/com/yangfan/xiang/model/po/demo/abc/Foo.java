@@ -40,7 +40,7 @@ public class Foo {
 		this.id = id;
 	}
 
-	@Column(precision=32, scale=16)
+	@Column(precision=19, scale=6)
 	private BigDecimal bigDecimalField;
 
 	public int getIntField() {
