@@ -11,13 +11,13 @@ import com.yangfan.xiang.persist.repository.demo.abc.FooRepository;
 import com.yangfan.xiang.service.iface.demo.abc.FooService;
 
 @Service
-public class FooServiceImpl extends CoreServiceSupport<Foo, String> implements FooService {
+public class FooServiceImpl extends CoreServiceSupport<Foo, Long> implements FooService {
 	
 	@Resource
 	private FooRepository fooRepository;
 
 	@Override
-	protected CoreRepository<Foo, String> getRepository() {
+	protected CoreRepository<Foo, Long> getRepository() {
 		return fooRepository;
 	}
 

@@ -23,6 +23,12 @@ public class FooRepositoryTest extends BaseRepositoryTest {
 		List<Foo> findAll = fooRepository.findAll();
 		System.out.println(findAll);
 	}
+	
+	@Test
+	public void testFindOne() {
+		Foo findOne = fooRepository.findOne(1L);
+		System.out.println(findOne);
+	}
 
 	@Test
 	public final void testSaveIterableOfS() {
