@@ -16,8 +16,6 @@
 		http://www.springframework.org/schema/data/jpa
 		http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
-	<context:property-placeholder location="classpath:jdbc.properties" />
-
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="${database.driverClassName}" />

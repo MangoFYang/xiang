@@ -3,14 +3,14 @@
 <mapper namespace="com.yangfan.xiang.persist.mapper.demo.emp.DeptMapper">
 
 	<resultMap id="DeptResultMap" type="com.yangfan.xiang.model.po.demo.emp.Dept">
-		<id property="deptNo" column="deptNo" jdbcType="INTEGER"/>
-		<result property="dName" column="dName" jdbcType="VARCHAR"/>
-		<result property="loc" column="loc" jdbcType="VARCHAR"/>
+		<id property="deptNo" column="DEPTNO" jdbcType="INTEGER"/>
+		<result property="deptName" column="DEPTNAME" jdbcType="VARCHAR"/>
+		<result property="loc" column="LOC" jdbcType="VARCHAR"/>
 	</resultMap>
 
 	<insert id="savePojo" parameterType="com.yangfan.xiang.model.po.demo.emp.Dept">
-		INSERT INTO DEMO_DEPT (DEPTNO, DNAME, LOC) 
-		VALUES ( #{deptNo}, #{dName}, #{loc} )
+		INSERT INTO DEMO_DEPT (DEPTNO, DEPTNAME, LOC) 
+		VALUES ( #{deptNo}, #{deptName}, #{loc} )
 	</insert>
 
 </mapper>
