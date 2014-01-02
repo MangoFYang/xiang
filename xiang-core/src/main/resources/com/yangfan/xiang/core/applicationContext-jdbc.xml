@@ -27,7 +27,7 @@
 
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<!-- 扫描Mapper类，使他们被自动装配-->
-		<property name="basePackage" value="${basePackage}" />
+		<property name="basePackage" value="com.yangfan.xiang.persist.mapper" />
 	</bean>
 
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
