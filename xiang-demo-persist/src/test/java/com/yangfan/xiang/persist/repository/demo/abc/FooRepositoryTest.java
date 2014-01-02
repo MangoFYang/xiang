@@ -11,9 +11,9 @@ import javax.annotation.Resource;
 import org.junit.Test;
 
 import com.yangfan.xiang.model.po.demo.abc.Foo;
-import com.yangfan.xiang.persist.repository.BaseRepositoryTest;
+import com.yangfan.xiang.persist.BasePersistTest;
 
-public class FooRepositoryTest extends BaseRepositoryTest {
+public class FooRepositoryTest extends BasePersistTest {
 	
 	@Resource
 	private FooRepository fooRepository;

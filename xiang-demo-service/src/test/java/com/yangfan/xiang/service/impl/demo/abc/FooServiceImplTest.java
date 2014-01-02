@@ -5,10 +5,10 @@ import javax.annotation.Resource;
 import org.junit.Test;
 
 import com.yangfan.xiang.model.po.demo.abc.Foo;
+import com.yangfan.xiang.service.BaseServiceTest;
 import com.yangfan.xiang.service.iface.demo.abc.FooService;
-import com.yangfan.xiang.service.impl.demo.BaseServiceImplTest;
 
-public class FooServiceImplTest extends BaseServiceImplTest {
+public class FooServiceImplTest extends BaseServiceTest {
 	
 	@Resource
 	private FooService fooService;

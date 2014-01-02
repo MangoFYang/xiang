@@ -1,11 +1,17 @@
-package com.yangfan.xiang.service.impl.demo;
+package com.yangfan.xiang.service;
+
+import javax.annotation.Resource;
 
 import org.junit.runner.RunWith;
+import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations="classpath:applicationContext-core.xml")
-public class BaseServiceImplTest {
+public class BaseServiceTest {
+	
+	@Resource
+	private ApplicationContext applicationContext;
 
 }

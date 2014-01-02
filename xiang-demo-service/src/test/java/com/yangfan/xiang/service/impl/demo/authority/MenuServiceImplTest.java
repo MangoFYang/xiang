@@ -7,10 +7,10 @@ import javax.annotation.Resource;
 import org.junit.Test;
 
 import com.yangfan.xiang.core.vo.TreeNodeVo;
+import com.yangfan.xiang.service.BaseServiceTest;
 import com.yangfan.xiang.service.iface.demo.authority.MenuService;
-import com.yangfan.xiang.service.impl.demo.BaseServiceImplTest;
 
-public class MenuServiceImplTest extends BaseServiceImplTest {
+public class MenuServiceImplTest extends BaseServiceTest {
 	
 	@Resource
 	private MenuService menuService;
