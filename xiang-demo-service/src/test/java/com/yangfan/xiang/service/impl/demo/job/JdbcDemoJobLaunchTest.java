@@ -7,18 +7,15 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobParameter;
 import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.launch.JobLauncher;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations="classpath:applicationContext-service.xml")
-public class JdbcDemoJobLaunchTest {
+import com.yangfan.xiang.service.BaseServiceTest;
+
+public class JdbcDemoJobLaunchTest extends BaseServiceTest {
 	
 	@Resource
 	private JobLauncher launcher;

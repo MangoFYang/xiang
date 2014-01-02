@@ -6,16 +6,13 @@ import java.util.Set;
 import javax.annotation.Resource;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobInstance;
 import org.springframework.batch.core.explore.JobExplorer;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations="classpath:applicationContext-service.xml")
-public class JobExplorerTest {
+import com.yangfan.xiang.service.BaseServiceTest;
+
+public class JobExplorerTest extends BaseServiceTest {
 	
 	@Resource
 	private JobExplorer jobExplorer;
@@ -46,9 +43,12 @@ public class JobExplorerTest {
 	
 	@Test
 	public void testGetJobExecutions() {
-		List<JobExecution> jobExecutions = jobExplorer.getJobExecutions(jobExplorer.getJobInstance(17L));
-		for (JobExecution jobExecution : jobExecutions) {
-			System.out.println(jobExecution);
+		JobInstance jobInstance = jobExplorer.getJobInstance(17L);
+		if(jobInstance != null) {
+			List<JobExecution> jobExecutions = jobExplorer.getJobExecutions(jobInstance);
+			for (JobExecution jobExecution : jobExecutions) {
+				System.out.println(jobExecution);
+			}
 		}
 	}
 	
