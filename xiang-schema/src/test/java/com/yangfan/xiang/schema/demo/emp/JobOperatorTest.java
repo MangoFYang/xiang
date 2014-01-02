@@ -1,21 +1,18 @@
-package com.yangfan.xiang.schema;
+package com.yangfan.xiang.schema.demo.emp;
 
 import java.util.Set;
 
 import javax.annotation.Resource;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.batch.core.JobParametersInvalidException;
 import org.springframework.batch.core.launch.JobInstanceAlreadyExistsException;
 import org.springframework.batch.core.launch.JobOperator;
 import org.springframework.batch.core.launch.NoSuchJobException;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations="classpath:applicationContext-schema.xml")
-public class JobOperatorTest {
+import com.yangfan.xiang.schema.BaseSchemaTest;
+
+public class JobOperatorTest extends BaseSchemaTest {
 	
 	@Resource
 	private JobOperator jobOperator;

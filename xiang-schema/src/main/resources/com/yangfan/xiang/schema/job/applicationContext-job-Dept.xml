@@ -45,7 +45,7 @@
 	<!-- 写入数据库 -->
 	<bean id="DeptItemWriter" class="org.springframework.batch.item.adapter.ItemWriterAdapter">
 	    <property name="targetObject" ref="com.yangfan.xiang.service.impl.demo.emp.DeptServiceImpl" />
-	    <property name="targetMethod" value="savePojo" />
+	    <property name="targetMethod" value="save" />
 	</bean>
 
 </beans>

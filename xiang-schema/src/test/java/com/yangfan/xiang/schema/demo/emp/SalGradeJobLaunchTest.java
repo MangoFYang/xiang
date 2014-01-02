@@ -1,4 +1,4 @@
-package com.yangfan.xiang.schema;
+package com.yangfan.xiang.schema.demo.emp;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -7,18 +7,15 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobParameter;
 import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.launch.JobLauncher;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations="classpath:applicationContext-schema.xml")
-public class SalGradeJobLaunchTest {
+import com.yangfan.xiang.schema.BaseSchemaTest;
+
+public class SalGradeJobLaunchTest extends BaseSchemaTest {
 	
 	@Resource
 	private JobLauncher launcher;

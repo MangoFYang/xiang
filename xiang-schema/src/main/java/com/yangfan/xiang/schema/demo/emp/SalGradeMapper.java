@@ -4,7 +4,7 @@ import org.springframework.batch.item.file.mapping.FieldSetMapper;
 import org.springframework.batch.item.file.transform.FieldSet;
 import org.springframework.validation.BindException;
 
-import com.yangfan.xiang.domain.demo.emp.SalGrade;
+import com.yangfan.xiang.model.po.demo.emp.SalGrade;
 
 /**
  * 初始化SalGrade数据时，从文本文件中读取的数据转换成Java对象时使用的映射。

@@ -5,8 +5,8 @@ import org.springframework.batch.item.file.transform.FieldSet;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.BindException;
 
-import com.yangfan.xiang.domain.demo.emp.Dept;
-import com.yangfan.xiang.domain.demo.emp.Emp;
+import com.yangfan.xiang.model.po.demo.emp.Dept;
+import com.yangfan.xiang.model.po.demo.emp.Emp;
 import com.yangfan.xiang.schema.SchemaException;
 
 /**

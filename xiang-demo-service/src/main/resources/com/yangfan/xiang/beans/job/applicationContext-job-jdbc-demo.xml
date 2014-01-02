@@ -19,8 +19,8 @@
 		http://www.springframework.org/schema/batch
 		http://www.springframework.org/schema/batch/spring-batch-2.1.xsd">
 
-	<batch:job id="jdbcDemoJob" parent="coreJob">
-		<batch:step id="jdbcDemoStep" parent="coreStep">
+	<batch:job id="jdbcDemoJob">
+		<batch:step id="jdbcDemoStep">
 			<batch:tasklet transaction-manager="transactionManager" ref="jdbcDemoTasklet"></batch:tasklet>
 		</batch:step>
 	</batch:job>
