@@ -1,52 +1,42 @@
 package com.yangfan.xiang.core.vo;
 
-import java.io.Serializable;
 
-public class ReturnVo implements Serializable {
+public class ReturnVo extends ExtraDataVo {
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -4189862821316647482L;
 	
-	private boolean success;
+	/**
+	 * 是否成功
+	 */
+	private Boolean success;
 	
+	/**
+	 * 成功/错误信息
+	 */
 	private String message;
 	
-	private Object otherData;
-
 	public ReturnVo() {
 	}
 	
-	public ReturnVo(boolean success) {
+	public ReturnVo(Boolean success) {
 		super();
 		this.success = success;
 	}
 
-	public ReturnVo(boolean success, String message) {
+	public ReturnVo(Boolean success, String message) {
 		super();
 		this.success = success;
 		this.message = message;
 	}
 	
-	public ReturnVo(boolean success, Object otherData) {
-		super();
-		this.success = success;
-		this.otherData = otherData;
-	}
-
-	public ReturnVo(boolean success, String message, Object otherData) {
-		super();
-		this.success = success;
-		this.message = message;
-		this.otherData = otherData;
-	}
-
-	public boolean isSuccess() {
+	public Boolean isSuccess() {
 		return success;
 	}
 
-	public void setSuccess(boolean success) {
+	public void setSuccess(Boolean success) {
 		this.success = success;
 	}
 
@@ -56,14 +46,6 @@ public class ReturnVo implements Serializable {
 
 	public void setMessage(String message) {
 		this.message = message;
-	}
-
-	public Object getOtherData() {
-		return otherData;
-	}
-
-	public void setOtherData(Object otherData) {
-		this.otherData = otherData;
 	}
 
 }

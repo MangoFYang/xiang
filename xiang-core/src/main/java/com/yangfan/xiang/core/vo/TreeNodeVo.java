@@ -1,12 +1,15 @@
 package com.yangfan.xiang.core.vo;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-public class TreeNodeVo {
+public class TreeNodeVo extends ExtraDataVo {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1034084110153137562L;
+
 	/**
 	 * 节点标识
 	 */
@@ -20,7 +23,7 @@ public class TreeNodeVo {
 	/**
 	 * 子节点
 	 */
-	List<TreeNodeVo> children = new ArrayList<TreeNodeVo>();
+	private List<TreeNodeVo> children = new ArrayList<TreeNodeVo>();
 	
 	/**
 	 * 是否为叶子节点
@@ -31,11 +34,6 @@ public class TreeNodeVo {
 	 * 是否展开
 	 */
 	private Boolean expanded;
-	
-	/**
-	 * 额外的数据
-	 */
-	private Map<String, String> extraData = new HashMap<String, String>();
 	
 	public String getId() {
 		return id;
@@ -67,18 +65,6 @@ public class TreeNodeVo {
 
 	public void setLeaf(Boolean leaf) {
 		this.leaf = leaf;
-	}
-
-	public Map<String, String> getExtraData() {
-		return extraData;
-	}
-
-	public void setExtraData(Map<String, String> extraData) {
-		this.extraData = extraData;
-	}
-	
-	public void putExtraData(String key, String value) {
-		extraData.put(key, value);
 	}
 
 	public Boolean getExpanded() {

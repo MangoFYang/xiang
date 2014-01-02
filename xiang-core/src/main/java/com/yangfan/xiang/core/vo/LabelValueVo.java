@@ -1,19 +1,23 @@
 package com.yangfan.xiang.core.vo;
 
-import java.io.Serializable;
 
-public class LabelValueVo implements Serializable {
+public class LabelValueVo extends ExtraDataVo {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -1024229985543899246L;
 
+	/**
+	 * 标签，用于显示。
+	 */
 	private String label;
 	
+	/**
+	 * 值，用于传递。
+	 */
 	private String value;
 	
-	private Object otherData;
 	
 	public LabelValueVo() {
 	}
@@ -24,13 +28,6 @@ public class LabelValueVo implements Serializable {
 		this.value = value;
 	}
 	
-	public LabelValueVo(String label, String value, Object otherData) {
-		super();
-		this.label = label;
-		this.value = value;
-		this.otherData = otherData;
-	}
-
 	public String getLabel() {
 		return label;
 	}
@@ -45,14 +42,6 @@ public class LabelValueVo implements Serializable {
 
 	public void setValue(String value) {
 		this.value = value;
-	}
-
-	public Object getOtherData() {
-		return otherData;
-	}
-
-	public void setOtherData(Object otherData) {
-		this.otherData = otherData;
 	}
 
 }

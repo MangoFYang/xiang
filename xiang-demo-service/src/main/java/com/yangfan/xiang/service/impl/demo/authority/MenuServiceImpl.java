@@ -89,7 +89,7 @@ public class MenuServiceImpl extends CoreServiceSupport<Menu, String> implements
 		node.setText(menu.getName());
 		node.setLeaf(menu.getLeaf());
 		node.setExpanded(menu.getExpanded());
-		node.putExtraData("viewName", menu.getViewName());
+		node.getExtraData().put("viewName", menu.getViewName());
 		return node;
 	}
 
