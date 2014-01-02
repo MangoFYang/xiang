@@ -1,0 +1,1 @@
+此目录或其子目录下的applicationContext-*.xml都会被自动加载，请勿重复引入。

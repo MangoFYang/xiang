@@ -16,5 +16,8 @@
 
 	<!-- 酷睿配置 -->
 	<import resource="classpath:com/yangfan/xiang/core/applicationContext-core.xml"/>
+	
+	<!-- 各个Project特有配置, 只需保证配置符合此格式便会自动加载. -->
+	<import resource="classpath*:com/yangfan/xiang/beans/**/applicationContext-*.xml"/>
 
 </beans>
