@@ -26,15 +26,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	
-	<dependencies>
-		<dependency>
-			<groupId>derby</groupId>
-			<artifactId>derby</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<scope>system</scope>
-			<systemPath>C:\Program Files\Java\jdk1.7.0_45\db\lib\derbyclient.jar</systemPath>
-		</dependency>
-	</dependencies>
-	
+
 </project>

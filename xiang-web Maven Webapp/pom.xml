@@ -90,11 +90,13 @@
 	</build>
 
 	<dependencies>
+		<!-- demo start -->
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>xiang-service</artifactId>
+			<artifactId>xiang-demo-controller</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<!-- demo end -->
 	</dependencies>
 
 </project>

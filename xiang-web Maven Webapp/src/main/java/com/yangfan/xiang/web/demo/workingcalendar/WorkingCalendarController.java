@@ -49,7 +49,7 @@ public class WorkingCalendarController {
 		} catch(Exception e) {
 			r.setSuccess(false);
 			r.setMessage(e.getMessage());
-			r.setOtherData(e);
+			r.getExtraData().put("e", e);
 			e.printStackTrace();
 		}
 		return r;

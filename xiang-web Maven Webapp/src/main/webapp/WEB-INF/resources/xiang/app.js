@@ -9,6 +9,6 @@ Ext.application({
 	controllers : [ 'Viewport' ],
 	autoCreateViewport : true,
 	launch: function() {
-		Ext.create('Xiang.view.workingcalendar.TypeEdit').show();
+		// Ext.create('Xiang.view.workingcalendar.TypeEdit').show();
     }
 });
