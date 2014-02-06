@@ -1,28 +1,29 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<artifactId>xiang-test</artifactId>
+	<name>xiang-test</name>
+	<description>xiang-test</description>
+
 	<parent>
 		<groupId>com.yangfan.xiang</groupId>
 		<artifactId>xiang-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>xiang-demo-service</artifactId>
-	<name>xiang-demo-service</name>
-	<description>xiang-demo-service</description>
 
 	<dependencies>
+		<!-- 测试 -->
 		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>xiang-demo-persist</artifactId>
-			<version>${project.version}</version>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
 		</dependency>
-		
-		<!-- test -->
 		<dependency>
-			<groupId>${project.groupId}</groupId>
-			<artifactId>xiang-test</artifactId>
-			<version>${project.version}</version>
-			<scope>test</scope>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.batch</groupId>
+			<artifactId>spring-batch-test</artifactId>
 		</dependency>
 	</dependencies>
 

@@ -10,9 +10,9 @@ import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobInstance;
 import org.springframework.batch.core.explore.JobExplorer;
 
-import com.yangfan.xiang.service.BaseServiceTest;
+import com.yangfan.xiang.test.CoreTest;
 
-public class JobExplorerTest extends BaseServiceTest {
+public class JobExplorerTest extends CoreTest {
 	
 	@Resource
 	private JobExplorer jobExplorer;

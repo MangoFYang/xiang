@@ -25,6 +25,15 @@
 			<artifactId>xiang-service</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		
+		<!-- test -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>xiang-test</artifactId>
+			<version>${project.version}</version>
+			<scope>test</scope>
+		</dependency>
+		
 	</dependencies>
 
 </project>

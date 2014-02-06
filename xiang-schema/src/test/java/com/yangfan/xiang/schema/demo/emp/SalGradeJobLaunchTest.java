@@ -13,9 +13,9 @@ import org.springframework.batch.core.JobParameter;
 import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.launch.JobLauncher;
 
-import com.yangfan.xiang.schema.BaseSchemaTest;
+import com.yangfan.xiang.test.CoreTest;
 
-public class SalGradeJobLaunchTest extends BaseSchemaTest {
+public class SalGradeJobLaunchTest extends CoreTest {
 	
 	@Resource
 	private JobLauncher launcher;

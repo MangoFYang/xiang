@@ -5,9 +5,9 @@ import javax.annotation.Resource;
 import org.junit.Test;
 
 import com.yangfan.xiang.model.po.demo.emp.Dept;
-import com.yangfan.xiang.persist.BasePersistTest;
+import com.yangfan.xiang.test.CoreTest;
 
-public class DeptMapperTest extends BasePersistTest {
+public class DeptMapperTest extends CoreTest {
 	
 	@Resource
 	private DeptMapper deptMapper;

@@ -27,4 +27,14 @@
 		</plugins>
 	</build>
 
+	<dependencies>
+		<!-- test -->
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>xiang-test</artifactId>
+			<version>${project.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
 </project>

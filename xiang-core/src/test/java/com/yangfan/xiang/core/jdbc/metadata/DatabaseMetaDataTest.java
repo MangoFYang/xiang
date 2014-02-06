@@ -10,9 +10,9 @@ import javax.sql.DataSource;
 
 import org.junit.Test;
 
-import com.yangfan.xiang.core.BaseCoreTest;
+import com.yangfan.xiang.test.CoreTest;
 
-public class DatabaseMetaDataTest extends BaseCoreTest {
+public class DatabaseMetaDataTest extends CoreTest {
 	
 	@Resource
 	private DataSource dataSource;
@@ -47,7 +47,7 @@ public class DatabaseMetaDataTest extends BaseCoreTest {
 				System.out.println();
 			}
 			
-			ResultSet tables = metaData.getTables(null, "SYS%", null, null);
+			ResultSet tables = metaData.getTables(null, "XIANG", "DEMO%", null);
 			int columnCount = tables.getMetaData().getColumnCount();
 			while(tables.next()) {
 				for (int i = 0; i < columnCount; i++) {

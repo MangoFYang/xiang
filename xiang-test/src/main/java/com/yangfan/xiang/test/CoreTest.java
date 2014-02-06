@@ -1,4 +1,4 @@
-package com.yangfan.xiang.core;
+package com.yangfan.xiang.test;
 
 import javax.annotation.Resource;
 
@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations="classpath:applicationContext-core.xml")
-public class BaseCoreTest {
+public class CoreTest {
 	
 	@Resource
 	private ApplicationContext applicationContext;

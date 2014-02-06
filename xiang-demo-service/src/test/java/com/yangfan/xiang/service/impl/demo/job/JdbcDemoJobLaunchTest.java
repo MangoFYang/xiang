@@ -13,9 +13,9 @@ import org.springframework.batch.core.JobParameter;
 import org.springframework.batch.core.JobParameters;
 import org.springframework.batch.core.launch.JobLauncher;
 
-import com.yangfan.xiang.service.BaseServiceTest;
+import com.yangfan.xiang.test.CoreTest;
 
-public class JdbcDemoJobLaunchTest extends BaseServiceTest {
+public class JdbcDemoJobLaunchTest extends CoreTest {
 	
 	@Resource
 	private JobLauncher launcher;

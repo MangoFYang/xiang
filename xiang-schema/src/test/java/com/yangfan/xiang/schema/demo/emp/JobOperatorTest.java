@@ -10,9 +10,9 @@ import org.springframework.batch.core.launch.JobInstanceAlreadyExistsException;
 import org.springframework.batch.core.launch.JobOperator;
 import org.springframework.batch.core.launch.NoSuchJobException;
 
-import com.yangfan.xiang.schema.BaseSchemaTest;
+import com.yangfan.xiang.test.CoreTest;
 
-public class JobOperatorTest extends BaseSchemaTest {
+public class JobOperatorTest extends CoreTest {
 	
 	@Resource
 	private JobOperator jobOperator;
