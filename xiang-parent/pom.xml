@@ -50,7 +50,7 @@
 		<spring-data-commons.version>1.5.0.RELEASE</spring-data-commons.version>
 		<ehcache.version>2.6.3</ehcache.version>
 		<ehcache-jgroupsreplication.version>1.7</ehcache-jgroupsreplication.version>
-		<jackson.version>1.9.12</jackson.version>
+		<jackson.version>2.3.1</jackson.version>
 		<joda-time.version>2.1</joda-time.version>
 		<slf4j.version>1.7.2</slf4j.version>
 		<log4j.version>1.2.17</log4j.version>
@@ -413,22 +413,22 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
-			<version>2.3.1</version>
+			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.3.1</version>
+			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
-			<version>2.3.1</version>
+			<version>${jackson.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.datatype</groupId>
 			<artifactId>jackson-datatype-hibernate4</artifactId>
-			<version>2.3.1</version>
+			<version>${jackson.version}</version>
 		</dependency>
 
 		<!-- joda-time -->
