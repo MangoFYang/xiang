@@ -13,8 +13,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-
 /**
  * 菜单
  * 
@@ -22,7 +20,6 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
  */
 @Entity
 @Table(name="DEMO_MENU")
-@JsonIgnoreProperties({"parent"})
 public class Menu implements Serializable {
 	
 	/**

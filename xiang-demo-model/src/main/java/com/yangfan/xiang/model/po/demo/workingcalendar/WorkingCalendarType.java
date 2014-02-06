@@ -13,8 +13,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-
 /**
  * 工作日历类型
  * 
@@ -24,7 +22,6 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 @Entity
 @Table(name="DEMO_CALD_WORKCALENDARTYPE")
 @SequenceGenerator(name = "WorkingCalendarTypeSequence", sequenceName="CALD_WORKCALENDARTYPE_SEQ")
-@JsonIgnoreProperties({"workingCalendarDefinitionList"})
 public class WorkingCalendarType {
 	
 	@Id

@@ -8,8 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-
 /**
  * 工作日历参数类型
  * 
@@ -18,7 +16,6 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
  */
 @Entity
 @Table(name="DEMO_CALD_PARAMTYPE")
-@JsonIgnoreProperties({"paramList"})
 public class ParamType {
 	
 	@Id

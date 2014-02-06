@@ -36,7 +36,7 @@
 			</props>
 		</property>
 		<!-- 扫描所有Domain -->
-		<property name="packagesToScan" value="${packagesToScan}"></property>
+		<property name="packagesToScan" value="com.yangfan.xiang.model.po"></property>
 	</bean>
 
 	<!-- 扫描所有Spring Data Repository -->

@@ -10,7 +10,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.hibernate.Hibernate;
 
 /**
@@ -22,7 +21,6 @@ import org.hibernate.Hibernate;
 @Entity
 @Table(name="DEMO_CALD_PARAM")
 @SequenceGenerator(name = "ParamSequence", sequenceName="CALD_PARAM_SEQ")
-@JsonIgnoreProperties({"paramType"})
 public class Param  {
 	
 	@Id

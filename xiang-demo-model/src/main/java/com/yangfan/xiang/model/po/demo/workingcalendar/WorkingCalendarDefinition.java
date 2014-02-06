@@ -10,7 +10,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.hibernate.Hibernate;
 
 /**
@@ -22,7 +21,6 @@ import org.hibernate.Hibernate;
 @Entity
 @Table(name="DEMO_CALD_WORKCALENDARDEF")
 @SequenceGenerator(name = "WorkingCalendarDefinitionSequence", sequenceName="CALD_WORKCALENDARDEF_SEQ")
-@JsonIgnoreProperties({"workingCalendarType", "param"})
 public class WorkingCalendarDefinition {
 	
 	@Id

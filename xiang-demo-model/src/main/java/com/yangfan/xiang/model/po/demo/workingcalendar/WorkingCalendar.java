@@ -14,7 +14,6 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.joda.time.DateTime;
 
 /**
@@ -26,7 +25,6 @@ import org.joda.time.DateTime;
 @Entity
 @Table(name="DEMO_CALD_WORKCALENDAR")
 @SequenceGenerator(name = "WorkingCalendarSequence", sequenceName="CALD_WORKCALENDAR_SEQ")
-@JsonIgnoreProperties({"workingCalendarType"})
 public class WorkingCalendar {
 	
 	/**

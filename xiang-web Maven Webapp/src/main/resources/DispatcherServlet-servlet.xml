@@ -16,7 +16,6 @@
 	<!-- 
 	Spring Web 子容器配置文件
 	 -->
-
 	<context:annotation-config></context:annotation-config>
 	
 	<context:component-scan base-package="com.yangfan.xiang.controller" use-default-filters="false"
@@ -30,12 +29,6 @@
 		</mvc:argument-resolvers>
 	</mvc:annotation-driven>
 	
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
-		<property name="prefix" value="/WEB-INF/views/jstl" />
-		<property name="suffix" value=".jsp" />
-	</bean>
-
 	<!-- 
 	<bean id="exceptionResolver"
 		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
@@ -55,6 +48,4 @@
 	</bean>
 	-->
 
-	<mvc:resources location="/WEB-INF/resources/" mapping="/resources/**" cache-period="0" /> 
-		
 </beans>
