@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 import org.junit.Test;
 import org.springframework.data.domain.Page;
 
-import com.yangfan.xiang.core.web.PageRequest;
+import com.yangfan.xiang.core.web.CoreRequestImpl;
 import com.yangfan.xiang.model.po.demo.abc.Foo;
 import com.yangfan.xiang.service.iface.demo.abc.FooService;
 import com.yangfan.xiang.test.CoreTest;
@@ -28,7 +28,7 @@ public class FooServiceImplTest extends CoreTest {
 	
 	@Test
 	public void testFindAllPageable() {
-		Page<Foo> findAll = fooService.findAll(new PageRequest(1, 2));
+		Page<Foo> findAll = fooService.findAll(new CoreRequestImpl(1, 2));
 		System.out.println(findAll);
 	}
 	

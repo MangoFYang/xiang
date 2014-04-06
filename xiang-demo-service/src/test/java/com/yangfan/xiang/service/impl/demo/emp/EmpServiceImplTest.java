@@ -8,10 +8,10 @@ import javax.annotation.Resource;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.yangfan.xiang.core.web.CoreRequestImpl;
 import com.yangfan.xiang.model.po.demo.emp.Dept;
 import com.yangfan.xiang.model.po.demo.emp.Emp;
 import com.yangfan.xiang.model.po.demo.emp.SalGrade;
@@ -38,7 +38,7 @@ public class EmpServiceImplTest {
 
 	@Test
 	public void testFindAllPageable() {
-		Page<Emp> findAll = empService.findAll(new PageRequest(2, 5));
+		Page<Emp> findAll = empService.findAll(new CoreRequestImpl(2, 5));
 		System.out.println(findAll);
 	}
 	

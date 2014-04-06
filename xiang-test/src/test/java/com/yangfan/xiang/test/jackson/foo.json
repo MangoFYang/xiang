@@ -1,0 +1,42 @@
+{
+    "content": [{
+        "id": 3,
+        "intField": 999,
+        "doubleField": 1.999,
+        "integerField": 9000,
+        "doubleBoxField": 1.2,
+        "stringField": "111strstr111",
+        "dateField": 1388632501802,
+        "bigDecimalField": 3.693693
+    }, {
+        "id": 4,
+        "intField": 999,
+        "doubleField": 1.999,
+        "integerField": 9000,
+        "doubleBoxField": 1.2,
+        "stringField": "111strstr111",
+        "dateField": 1388632501802,
+        "bigDecimalField": 3.693693
+    }, {
+        "id": 5,
+        "intField": 999,
+        "doubleField": 1.999,
+        "integerField": 9000,
+        "doubleBoxField": 1.2,
+        "stringField": "111strstr111",
+        "dateField": 1388632501802,
+        "bigDecimalField": 3.693693
+    }],
+    "size": 2,
+    "number": 2,
+    "sort": [{
+        "direction": "ASC",
+        "property": "id",
+        "ascending": true
+    }],
+    "totalPages": 2,
+    "firstPage": false,
+    "lastPage": true,
+    "totalElements": 40,
+    "numberOfElements": 2
+}
