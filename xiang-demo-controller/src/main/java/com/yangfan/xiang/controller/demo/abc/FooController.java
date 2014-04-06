@@ -2,12 +2,12 @@ package com.yangfan.xiang.controller.demo.abc;
 
 import javax.annotation.Resource;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.yangfan.xiang.core.web.CoreRequest;
+import com.yangfan.xiang.core.web.CoreResponse;
 import com.yangfan.xiang.model.po.demo.abc.Foo;
 import com.yangfan.xiang.service.iface.demo.abc.FooService;
 
@@ -20,8 +20,8 @@ public class FooController {
 
 	@RequestMapping("/index")
 	@ResponseBody
-	public Page<Foo> index(Pageable pageable) {
-		Page<Foo> findAll = fooService.findAll(pageable);
+	public CoreResponse<Foo> index(CoreRequest coreRequest) {
+		CoreResponse<Foo> findAll = fooService.findAll(coreRequest);
 		return findAll;
 	}
 	
