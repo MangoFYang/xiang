@@ -3,13 +3,12 @@ package com.yangfan.xiang.core.service.support;
 import java.io.Serializable;
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
 import com.yangfan.xiang.core.persist.repository.CoreRepository;
 import com.yangfan.xiang.core.service.CoreService;
-import com.yangfan.xiang.core.web.CoreRequest;
-import com.yangfan.xiang.core.web.CoreResponse;
-import com.yangfan.xiang.core.web.CoreResponseImpl;
 
 /**
  * 抽象的Service实现，支持缓存服务。
@@ -59,10 +58,8 @@ public abstract class CoreServiceSupport<T, ID extends Serializable> extends Cac
 	}
 	
 	@Override
-	public CoreResponse<T> findAll(CoreRequest coreRequest) {
-		CoreResponse<T> coreResponse = new CoreResponseImpl<T>(
-				getRepository().findAll(coreRequest), coreRequest.getFilter());
-		return coreResponse;
+	public Page<T> findAll(Pageable pageable) {
+		return getRepository().findAll(pageable);
 	}
 
 	@Override

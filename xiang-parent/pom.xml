@@ -38,16 +38,16 @@
 		<jdk.version>1.7</jdk.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<commons-logging.version>1.1.1</commons-logging.version>
-		<springframework.version>4.0.0.RELEASE</springframework.version>
+		<springframework.version>4.0.3.RELEASE</springframework.version>
 		<aspectjweaver.version>1.7.1</aspectjweaver.version>
 		<cglib.version>2.2.2</cglib.version>
 		<mybatis.version>3.1.1</mybatis.version>
 		<mybatis-spring.version>1.1.0</mybatis-spring.version>
 		<mybatis-ehcache.version>1.0.0</mybatis-ehcache.version>
-		<hibernate.version>4.1.9.Final</hibernate.version>
+		<hibernate.version>4.3.5.Final</hibernate.version>
 		<spring-batch.version>2.1.9.RELEASE</spring-batch.version>
-		<spring-data-jpa.version>1.3.0.RELEASE</spring-data-jpa.version>
-		<spring-data-commons.version>1.5.0.RELEASE</spring-data-commons.version>
+		<spring-data-jpa.version>1.5.1.RELEASE</spring-data-jpa.version>
+		<spring-data-commons.version>1.7.1.RELEASE</spring-data-commons.version>
 		<ehcache.version>2.6.3</ehcache.version>
 		<ehcache-jgroupsreplication.version>1.7</ehcache-jgroupsreplication.version>
 		<jackson.version>2.3.1</jackson.version>

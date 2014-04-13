@@ -10,12 +10,12 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import com.yangfan.xiang.core.persist.repository.CoreRepository;
 import com.yangfan.xiang.core.service.support.CoreServiceSupport;
-import com.yangfan.xiang.core.web.CoreRequest;
 import com.yangfan.xiang.model.po.demo.workingcalendar.Param;
 import com.yangfan.xiang.model.po.demo.workingcalendar.ParamType_;
 import com.yangfan.xiang.model.po.demo.workingcalendar.Param_;
@@ -33,7 +33,7 @@ public class ParamServiceImpl extends CoreServiceSupport<Param, Long> implements
 		return paramRepository;
 	}
 	
-	public Page<Param> findByWhere(final Param param, CoreRequest coreRequest) {
+	public Page<Param> findByWhere(final Param param, Pageable pageable) {
 		Page<Param> findAll = paramRepository.findAll(new Specification<Param>() {
 			@Override
 			public Predicate toPredicate(Root<Param> root, CriteriaQuery<?> query,
@@ -49,7 +49,7 @@ public class ParamServiceImpl extends CoreServiceSupport<Param, Long> implements
 				}
 				return null;
 			}
-		}, coreRequest);
+		}, pageable);
 		return findAll;
 	}
 

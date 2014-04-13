@@ -8,10 +8,10 @@ import javax.annotation.Resource;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.yangfan.xiang.core.web.CoreRequestImpl;
 import com.yangfan.xiang.model.po.demo.emp.Dept;
 import com.yangfan.xiang.service.iface.demo.emp.DeptService;
 
@@ -33,7 +33,7 @@ public class DeptServiceImplTest {
 	
 	@Test
 	public void testFindAllPageable() {
-		Page<Dept> findAll = deptService.findAll(new CoreRequestImpl(1, 2));
+		Page<Dept> findAll = deptService.findAll(new PageRequest(1, 2));
 		System.out.println(findAll.getContent());
 	}
 	
@@ -41,7 +41,7 @@ public class DeptServiceImplTest {
 	public void testFindByWhere() {
 		Dept dept = new Dept();
 		dept.setDeptName("s");
-		final Page<Dept> findByWhere = deptService.findByWhere(dept, new CoreRequestImpl(4, 1));
+		final Page<Dept> findByWhere = deptService.findByWhere(dept, new PageRequest(4, 1));
 		for (Dept dept2 : findByWhere) {
 			System.out.println(dept2);
 		}

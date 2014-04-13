@@ -3,10 +3,9 @@ package com.yangfan.xiang.core.service;
 import java.io.Serializable;
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-
-import com.yangfan.xiang.core.web.CoreRequest;
-import com.yangfan.xiang.core.web.CoreResponse;
 
 public interface CoreService<T, ID extends Serializable> {
 	
@@ -28,10 +27,10 @@ public interface CoreService<T, ID extends Serializable> {
 	/**
 	 * 返回符合分页规则的对象列表
 	 * 
-	 * @param coreRequest 分页规则
+	 * @param pageable 分页规则
 	 * @return 符合分页规则的对象列表
 	 */
-	public CoreResponse<T> findAll(CoreRequest coreRequest);
+	public Page<T> findAll(Pageable pageable);
 
 	/**
 	 * 保存给定的所有对象
