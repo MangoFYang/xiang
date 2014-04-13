@@ -29,7 +29,7 @@
 		</mvc:argument-resolvers>
 	</mvc:annotation-driven>
 
-<!-- 	<bean class="com.yangfan.xiang.core.web.support.CorePostProcessor" /> -->
+	<bean class="com.yangfan.xiang.core.web.support.CorePostProcessor" />
 
 	<!-- 
 	<bean id="exceptionResolver"

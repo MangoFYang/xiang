@@ -1,4 +1,4 @@
-package com.yangfan.xiang.core.util;
+package com.yangfan.xiang.core.support;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
