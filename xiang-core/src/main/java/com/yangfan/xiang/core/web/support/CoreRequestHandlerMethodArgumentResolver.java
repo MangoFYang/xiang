@@ -8,6 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
+import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 
@@ -24,6 +25,8 @@ import com.yangfan.xiang.core.web.domain.CoreSorter;
 import com.yangfan.xiang.core.web.domain.DefaultCoreRequest;
 
 public class CoreRequestHandlerMethodArgumentResolver implements HandlerMethodArgumentResolver {
+	
+	public static final String CORE_REQUEST_ATTR = "CoreRequest";
 	
 	private static final String DEFAULT_PREFIX = "core";
 	private static final String DEFAULT_QUALIFIER_DELIMITER = ".";
@@ -105,7 +108,7 @@ public class CoreRequestHandlerMethodArgumentResolver implements HandlerMethodAr
 			}
 		}
 		
-//		webRequest.setAttribute("CoreRequest", coreRequest, RequestAttributes.SCOPE_REQUEST);
+		webRequest.setAttribute(CORE_REQUEST_ATTR, coreRequest, RequestAttributes.SCOPE_REQUEST);
 		
 		return coreRequest;
 	}

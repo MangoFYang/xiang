@@ -16,7 +16,8 @@
 
 	<context:annotation-config></context:annotation-config>
 	
-	<context:component-scan base-package="com.yangfan.xiang" use-default-filters="true"
+	<context:component-scan base-package="com.yangfan.xiang.core,com.yangfan.xiang.persist,com.yangfan.xiang.service"
+		use-default-filters="true"
 		name-generator="com.yangfan.xiang.core.spring.BeanNameGeneratorImpl">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>

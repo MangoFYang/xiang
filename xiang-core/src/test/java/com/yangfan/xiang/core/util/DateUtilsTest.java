@@ -4,6 +4,8 @@ import java.util.Date;
 
 import org.junit.Test;
 
+import com.yangfan.xiang.core.support.DateUtils;
+
 public class DateUtilsTest {
 	
 	private Date date = new Date();
