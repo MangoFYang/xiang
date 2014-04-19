@@ -19,30 +19,11 @@
 	<context:annotation-config></context:annotation-config>
 	
 	<context:component-scan base-package="com.yangfan.xiang.controller" use-default-filters="true"
-		name-generator="com.yangfan.xiang.core.spring.BeanNameGeneratorImpl">
+		name-generator="com.yangfan.xiang.core.support.BeanNameGeneratorImpl">
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
 	</context:component-scan>
 
 	<mvc:annotation-driven></mvc:annotation-driven>
-
-	<!-- 
-	<bean id="exceptionResolver"
-		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
-		<property name="defaultErrorView">
-			<value>/error/error</value>
-		</property>
-		<property name="defaultStatusCode">
-			<value>500</value>
-		</property>
-		<property name="exceptionAttribute">
-			<value>exception</value>
-		</property>
-		<property name="warnLogCategory">
-			<value>org.springframework.web.servlet.handler.SimpleMappingExceptionResolver
-			</value>
-		</property>
-	</bean>
-	-->
 
 </beans>

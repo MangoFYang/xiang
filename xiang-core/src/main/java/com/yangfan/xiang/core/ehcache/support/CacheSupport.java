@@ -1,7 +1,7 @@
 package com.yangfan.xiang.core.ehcache.support;
 
 import com.yangfan.xiang.core.service.CacheService;
-import com.yangfan.xiang.core.spring.ApplicationContextHolder;
+import com.yangfan.xiang.core.support.ApplicationContextHolder;
 
 /**
  * EhCache帮助类

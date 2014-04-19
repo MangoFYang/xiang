@@ -1,7 +1,8 @@
-package com.yangfan.xiang.core.spring;
+package com.yangfan.xiang.core.support;
 
 import org.junit.Test;
 
+import com.yangfan.xiang.core.support.ApplicationContextHolder;
 import com.yangfan.xiang.test.CoreTest;
 
 public class ApplicationContextHolderTest extends CoreTest {

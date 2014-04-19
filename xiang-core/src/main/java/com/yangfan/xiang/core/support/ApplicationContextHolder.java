@@ -1,4 +1,4 @@
-package com.yangfan.xiang.core.spring;
+package com.yangfan.xiang.core.support;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

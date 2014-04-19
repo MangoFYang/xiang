@@ -18,7 +18,7 @@ public class FooController {
 	private FooService fooService;
 
 	@RequestMapping("/index")
-	public Page<Foo> index(CoreRequest coreRequest) {
+	public Page<Foo> index(CoreRequest coreRequest, Foo foo) {
 		Page<Foo> findAll = fooService.findAll(coreRequest.getPageable());
 		return findAll;
 	}

@@ -2,7 +2,7 @@ package com.yangfan.xiang.service.impl.demo.dict.util;
 
 import java.util.List;
 
-import com.yangfan.xiang.core.spring.ApplicationContextHolder;
+import com.yangfan.xiang.core.support.ApplicationContextHolder;
 import com.yangfan.xiang.model.po.demo.dict.Dict;
 import com.yangfan.xiang.service.iface.demo.dict.DictService;
 
