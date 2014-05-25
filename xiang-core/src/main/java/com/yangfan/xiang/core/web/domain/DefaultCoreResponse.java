@@ -30,68 +30,68 @@ public class DefaultCoreResponse implements CoreResponse, Serializable {
 	}
 
 	@Override
-	public int getNumber() {
-		return page.getNumber() + 1;
+	public Integer getNumber() {
+		return page == null ? null : page.getNumber() + 1;
 	}
 
 	@Override
-	public int getSize() {
-		return page.getSize();
+	public Integer getSize() {
+		return page == null ? null : page.getSize();
 	}
 
 	@Override
-	public int getTotalPages() {
-		return page.getTotalPages();
+	public Integer getTotalPages() {
+		return page == null ? null : page.getTotalPages();
 	}
 
 	@Override
-	public int getNumberOfElements() {
-		return page.getNumberOfElements();
+	public Integer getNumberOfElements() {
+		return page == null ? null : page.getNumberOfElements();
 	}
 
 	@Override
-	public long getTotalElements() {
-		return page.getTotalElements();
+	public Long getTotalElements() {
+		return page == null ? null : page.getTotalElements();
 	}
 
 	@Override
-	public boolean hasPreviousPage() {
-		return page.hasPreviousPage();
+	public Boolean hasPreviousPage() {
+		return page == null ? null : page.hasPreviousPage();
 	}
 
 	@Override
-	public boolean isFirstPage() {
-		return page.isFirstPage();
+	public Boolean isFirstPage() {
+		return page == null ? null : page.isFirstPage();
 	}
 
 	@Override
-	public boolean hasNextPage() {
-		return page.hasNextPage();
+	public Boolean hasNextPage() {
+		return page == null ? null : page.hasNextPage();
 	}
 
 	@Override
-	public boolean isLastPage() {
-		return page.isLastPage();
+	public Boolean isLastPage() {
+		return page == null ? null : page.isLastPage();
 	}
 
 	@Override
 	public List<?> getContent() {
-		return page.getContent();
+		return page == null ? null : page.getContent();
 	}
 
 	@Override
-	public boolean hasContent() {
-		return page.hasContent();
+	public Boolean hasContent() {
+		return page == null ? null : page.hasContent();
 	}
 
 	@Override
 	public List<CoreOrder> getOrders() {
-		return coreRequest.getSorter() == null ? null : coreRequest.getSorter().getOrderList();
+		return ( coreRequest == null || coreRequest.getSorter() == null ) ? null : coreRequest.getSorter().getOrderList();
 	}
 
 	@Override
 	public List<CoreCondition> getFilters() {
-		return coreRequest.getFilter() == null ? null : coreRequest.getFilter().getConditionList();
+		return ( coreRequest == null || coreRequest.getFilter() == null ) ? null : coreRequest.getFilter().getConditionList();
 	}
 
 }

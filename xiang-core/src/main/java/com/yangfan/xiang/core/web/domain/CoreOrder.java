@@ -5,6 +5,14 @@ public class CoreOrder {
 	private String property;
 	
 	private String direction;
+	
+	public CoreOrder() {
+	}
+	
+	public CoreOrder(String property, String direction) {
+		this.property = property;
+		this.direction = direction;
+	}
 
 	public String getProperty() {
 		return property;

@@ -11,63 +11,63 @@ public interface CoreResponse {
 	 * 
 	 * @return the number of the current page
 	 */
-	int getNumber();
+	Integer getNumber();
 
 	/**
 	 * Returns the size of the page.
 	 * 
 	 * @return the size of the page
 	 */
-	int getSize();
+	Integer getSize();
 
 	/**
 	 * Returns the number of total pages.
 	 * 
 	 * @return the number of toral pages
 	 */
-	int getTotalPages();
+	Integer getTotalPages();
 
 	/**
 	 * Returns the number of elements currently on this page.
 	 * 
 	 * @return the number of elements currently on this page
 	 */
-	int getNumberOfElements();
+	Integer getNumberOfElements();
 
 	/**
 	 * Returns the total amount of elements.
 	 * 
 	 * @return the total amount of elements
 	 */
-	long getTotalElements();
+	Long getTotalElements();
 
 	/**
 	 * Returns if there is a previous page.
 	 * 
 	 * @return if there is a previous page
 	 */
-	boolean hasPreviousPage();
+	Boolean hasPreviousPage();
 
 	/**
 	 * Returns whether the current page is the first one.
 	 * 
 	 * @return
 	 */
-	boolean isFirstPage();
+	Boolean isFirstPage();
 
 	/**
 	 * Returns if there is a next page.
 	 * 
 	 * @return if there is a next page
 	 */
-	boolean hasNextPage();
+	Boolean hasNextPage();
 
 	/**
 	 * Returns whether the current page is the last one.
 	 * 
 	 * @return
 	 */
-	boolean isLastPage();
+	Boolean isLastPage();
 
 	/**
 	 * Returns the page content as {@link List}.
@@ -81,7 +81,7 @@ public interface CoreResponse {
 	 * 
 	 * @return
 	 */
-	boolean hasContent();
+	Boolean hasContent();
 	
 	public List<CoreOrder> getOrders();
 	
