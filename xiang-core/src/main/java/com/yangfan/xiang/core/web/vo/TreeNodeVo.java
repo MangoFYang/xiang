@@ -1,9 +1,9 @@
-package com.yangfan.xiang.core.vo;
+package com.yangfan.xiang.core.web.vo;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class TreeNodeVo extends ExtraDataVo {
+public class TreeNodeVo extends BaseVo {
 	
 	/**
 	 * 

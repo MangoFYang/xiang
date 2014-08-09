@@ -1,23 +1,19 @@
-package com.yangfan.xiang.model.po.demo.abc;
+package com.yangfan.xiang.model.vo.demo.abc;
 
+import java.lang.reflect.InvocationTargetException;
 import java.math.BigDecimal;
 import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import org.apache.commons.beanutils.PropertyUtils;
 
-@Entity
-@Table(name="DEMO_FOO")
-@SequenceGenerator(name = "FooSequence", sequenceName="FOO_SEQ")
-public class Foo {
+import com.yangfan.xiang.core.ConvertException;
+import com.yangfan.xiang.core.web.vo.BaseVo;
+import com.yangfan.xiang.model.po.demo.abc.Foo;
+
+public class FooVo extends BaseVo {
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO, generator="FooSequence")
+	private static final long serialVersionUID = 6301404444861881799L;
+
 	private long id;
 	
 	private int intField;
@@ -32,9 +28,19 @@ public class Foo {
 	
 	private Date dateField;
 	
-	@Column(precision=19, scale=6)
 	private BigDecimal bigDecimalField;
 	
+	public Foo toFoo() {
+		try {
+			Foo foo = new Foo();
+			PropertyUtils.copyProperties(foo, this);
+			return foo;
+		} catch (IllegalAccessException | InvocationTargetException
+				| NoSuchMethodException e) {
+			throw new ConvertException(e);
+		}
+	}
+
 	public long getId() {
 		return id;
 	}
@@ -98,5 +104,5 @@ public class Foo {
 	public void setBigDecimalField(BigDecimal bigDecimalField) {
 		this.bigDecimalField = bigDecimalField;
 	}
-
+	
 }

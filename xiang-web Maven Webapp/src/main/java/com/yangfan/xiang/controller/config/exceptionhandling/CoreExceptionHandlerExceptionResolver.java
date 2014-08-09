@@ -5,6 +5,7 @@ import java.lang.reflect.Method;
 import javax.annotation.Resource;
 
 import org.springframework.core.Ordered;
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.method.annotation.ExceptionHandlerMethodResolver;
@@ -16,6 +17,7 @@ public class CoreExceptionHandlerExceptionResolver extends
 		ExceptionHandlerExceptionResolver {
 	
 	public CoreExceptionHandlerExceptionResolver() {
+		getMessageConverters().add(new MappingJackson2HttpMessageConverter());
 		setOrder(Ordered.HIGHEST_PRECEDENCE);
 	}
 	

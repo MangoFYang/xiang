@@ -2,15 +2,15 @@ package com.yangfan.xiang.core.web.support;
 
 import java.util.List;
 
-import com.yangfan.xiang.core.web.domain.CoreCondition;
-import com.yangfan.xiang.core.web.domain.CoreFilter;
-import com.yangfan.xiang.core.web.domain.CoreOrder;
-import com.yangfan.xiang.core.web.domain.CorePager;
-import com.yangfan.xiang.core.web.domain.CoreRequest;
-import com.yangfan.xiang.core.web.domain.CoreSorter;
-import com.yangfan.xiang.core.web.domain.DefaultCoreRequest;
+import com.yangfan.xiang.core.web.vo.CoreCondition;
+import com.yangfan.xiang.core.web.vo.CoreFilter;
+import com.yangfan.xiang.core.web.vo.CoreOrder;
+import com.yangfan.xiang.core.web.vo.CorePager;
+import com.yangfan.xiang.core.web.vo.CoreRequest;
+import com.yangfan.xiang.core.web.vo.CoreSorter;
+import com.yangfan.xiang.core.web.vo.DefaultCoreRequest;
 
-public abstract class CoreRequestFactory {
+public abstract class RequestFactory {
 	
 	/**
 	 * 

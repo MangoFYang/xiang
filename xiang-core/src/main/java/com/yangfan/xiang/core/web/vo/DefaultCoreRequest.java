@@ -1,4 +1,4 @@
-package com.yangfan.xiang.core.web.domain;
+package com.yangfan.xiang.core.web.vo;
 
 import java.io.Serializable;
 import java.util.ArrayList;

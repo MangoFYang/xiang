@@ -64,6 +64,7 @@
 		<hibernate-jpamodelgen.version>1.2.0.Final</hibernate-jpamodelgen.version>
 		<freemarker.version>2.3.20</freemarker.version>
 		<cxf.version>2.7.6</cxf.version>
+		<commons-beanutils.version>1.9.2</commons-beanutils.version>
 	</properties>
 
 	<build>
@@ -479,6 +480,13 @@
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc6</artifactId>
 			<version>${ojdbc6.version}</version>
+		</dependency>
+		
+		<!-- commons -->
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>${commons-beanutils.version}</version>
 		</dependency>
 
 	</dependencies>

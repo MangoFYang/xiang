@@ -6,7 +6,7 @@ import javax.annotation.Resource;
 
 import org.junit.Test;
 
-import com.yangfan.xiang.core.vo.TreeNodeVo;
+import com.yangfan.xiang.core.web.vo.TreeNodeVo;
 import com.yangfan.xiang.service.iface.demo.authority.MenuService;
 import com.yangfan.xiang.test.CoreTest;
 

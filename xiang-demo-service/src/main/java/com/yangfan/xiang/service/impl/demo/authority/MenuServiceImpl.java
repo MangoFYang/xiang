@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.yangfan.xiang.core.persist.repository.CoreRepository;
 import com.yangfan.xiang.core.service.support.CoreServiceSupport;
-import com.yangfan.xiang.core.vo.TreeNodeVo;
+import com.yangfan.xiang.core.web.vo.TreeNodeVo;
 import com.yangfan.xiang.model.po.demo.authority.Menu;
 import com.yangfan.xiang.persist.repository.demo.authority.MenuRepository;
 import com.yangfan.xiang.service.iface.demo.authority.MenuService;
@@ -89,7 +89,7 @@ public class MenuServiceImpl extends CoreServiceSupport<Menu, String> implements
 		node.setText(menu.getName());
 		node.setLeaf(menu.getLeaf());
 		node.setExpanded(menu.getExpanded());
-		node.getExtraData().put("viewName", menu.getViewName());
+//		node.getExtraData().put("viewName", menu.getViewName());
 		return node;
 	}
 

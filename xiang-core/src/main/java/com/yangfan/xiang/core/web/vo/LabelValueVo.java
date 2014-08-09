@@ -1,7 +1,7 @@
-package com.yangfan.xiang.core.vo;
+package com.yangfan.xiang.core.web.vo;
 
 
-public class LabelValueVo extends ExtraDataVo {
+public class LabelValueVo extends BaseVo {
 
 	/**
 	 * 

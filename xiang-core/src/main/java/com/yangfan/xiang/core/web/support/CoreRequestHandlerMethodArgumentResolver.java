@@ -8,7 +8,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.support.WebDataBinderFactory;
 import org.springframework.web.context.request.NativeWebRequest;
-import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 
@@ -16,17 +15,15 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.yangfan.xiang.core.logger.Logger;
 import com.yangfan.xiang.core.logger.LoggerFactory;
-import com.yangfan.xiang.core.web.domain.CoreCondition;
-import com.yangfan.xiang.core.web.domain.CoreFilter;
-import com.yangfan.xiang.core.web.domain.CoreOrder;
-import com.yangfan.xiang.core.web.domain.CorePager;
-import com.yangfan.xiang.core.web.domain.CoreRequest;
-import com.yangfan.xiang.core.web.domain.CoreSorter;
-import com.yangfan.xiang.core.web.domain.DefaultCoreRequest;
+import com.yangfan.xiang.core.web.vo.CoreCondition;
+import com.yangfan.xiang.core.web.vo.CoreFilter;
+import com.yangfan.xiang.core.web.vo.CoreOrder;
+import com.yangfan.xiang.core.web.vo.CorePager;
+import com.yangfan.xiang.core.web.vo.CoreRequest;
+import com.yangfan.xiang.core.web.vo.CoreSorter;
+import com.yangfan.xiang.core.web.vo.DefaultCoreRequest;
 
 public class CoreRequestHandlerMethodArgumentResolver implements HandlerMethodArgumentResolver {
-	
-	public static final String CORE_REQUEST_ATTR = "CoreRequest";
 	
 	private static final String DEFAULT_PREFIX = "core";
 	private static final String DEFAULT_QUALIFIER_DELIMITER = ".";
@@ -107,8 +104,6 @@ public class CoreRequestHandlerMethodArgumentResolver implements HandlerMethodAr
 				coreRequest.setFilter(new CoreFilter(conditionList));
 			}
 		}
-		
-		webRequest.setAttribute(CORE_REQUEST_ATTR, coreRequest, RequestAttributes.SCOPE_REQUEST);
 		
 		return coreRequest;
 	}

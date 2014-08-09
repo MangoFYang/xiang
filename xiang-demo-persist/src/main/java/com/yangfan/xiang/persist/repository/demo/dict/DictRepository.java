@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import com.yangfan.xiang.core.persist.repository.CoreRepository;
-import com.yangfan.xiang.core.vo.LabelValueVo;
+import com.yangfan.xiang.core.web.vo.LabelValueVo;
 import com.yangfan.xiang.model.po.demo.dict.Dict;
 
 public interface DictRepository extends CoreRepository<Dict, String> {
@@ -42,7 +42,7 @@ public interface DictRepository extends CoreRepository<Dict, String> {
 	 * 
 	 * @return
 	 */
-	@Query("select new com.yangfan.xiang.core.vo.LabelValueVo(d.code, d.label) from Dict d")
+	@Query("select new com.yangfan.xiang.core.web.vo.LabelValueVo(d.code, d.label) from Dict d")
 	List<LabelValueVo> findCodeAndLabelNew();
 	
 }

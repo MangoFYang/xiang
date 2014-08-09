@@ -1,4 +1,4 @@
-package com.yangfan.xiang.core.web.domain;
+package com.yangfan.xiang.core.web.vo;
 
 public class CoreOrder {
 	

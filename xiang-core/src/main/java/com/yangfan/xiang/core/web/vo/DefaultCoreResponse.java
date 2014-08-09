@@ -1,32 +1,40 @@
-package com.yangfan.xiang.core.web.domain;
+package com.yangfan.xiang.core.web.vo;
 
 import java.io.Serializable;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
 
-public class DefaultCoreResponse implements CoreResponse, Serializable {
+public class DefaultCoreResponse<T> extends DefaultSimpleResponse<T> implements CoreResponse<T>, Serializable {
 
 	private static final long serialVersionUID = 3935090936065712570L;
 	
-	private Page<?> page;
-	
-	private CoreRequest coreRequest;
+	private Page<T> page;
 	
 	public DefaultCoreResponse() {
 	}
 	
-	public DefaultCoreResponse(Page<?> page, CoreRequest coreRequest) {
-		this.page = page;
-		this.coreRequest = coreRequest;
-	}
-
-	public void setPage(Page<?> page) {
+	public DefaultCoreResponse(Page<T> page) {
 		this.page = page;
 	}
+	
+	public DefaultCoreResponse(Boolean success, String message, Page<T> page) {
+		super(success, message);
+		this.page = page;
+	}
 
-	public void setCoreRequest(CoreRequest coreRequest) {
-		this.coreRequest = coreRequest;
+	public void setPage(Page<T> page) {
+		this.page = page;
+	}
+	
+	@Override
+	public List<T> getContent() {
+		return page == null ? null : page.getContent();
+	}
+
+	@Override
+	public Boolean hasContent() {
+		return page == null ? null : page.hasContent();
 	}
 
 	@Override
@@ -72,26 +80,6 @@ public class DefaultCoreResponse implements CoreResponse, Serializable {
 	@Override
 	public Boolean isLastPage() {
 		return page == null ? null : page.isLastPage();
-	}
-
-	@Override
-	public List<?> getContent() {
-		return page == null ? null : page.getContent();
-	}
-
-	@Override
-	public Boolean hasContent() {
-		return page == null ? null : page.hasContent();
-	}
-
-	@Override
-	public List<CoreOrder> getOrders() {
-		return ( coreRequest == null || coreRequest.getSorter() == null ) ? null : coreRequest.getSorter().getOrderList();
-	}
-
-	@Override
-	public List<CoreCondition> getFilters() {
-		return ( coreRequest == null || coreRequest.getFilter() == null ) ? null : coreRequest.getFilter().getConditionList();
 	}
 
 }

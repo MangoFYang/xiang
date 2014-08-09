@@ -1,10 +1,10 @@
-package com.yangfan.xiang.core.web.domain;
+package com.yangfan.xiang.core.web.vo;
 
 import java.util.List;
 
 import org.springframework.data.domain.Page;
 
-public interface CoreResponse {
+public interface CoreResponse<T> extends SimpleResponse<T> {
 	
 	/**
 	 * Returns the number of the current page. Is always non-negative and less that {@code Page#getTotalPages()}.
@@ -74,7 +74,7 @@ public interface CoreResponse {
 	 * 
 	 * @return
 	 */
-	List<?> getContent();
+	List<T> getContent();
 
 	/**
 	 * Returns whether the {@link Page} has content at all.
@@ -83,8 +83,4 @@ public interface CoreResponse {
 	 */
 	Boolean hasContent();
 	
-	public List<CoreOrder> getOrders();
-	
-	public List<CoreCondition> getFilters();
-
 }
